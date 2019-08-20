@@ -1,0 +1,388 @@
+Special Dates:
+  Courses begin: 2019-08-27
+  Courses end: 2019-12-06
+  Add deadline: 2019-09-10
+  Drop deadline: 2019-10-15
+  Withdraw deadline: 2019-10-22
+  Thanksgiving recess:
+    start: 2019-11-27
+    end: 2019-12-01
+  Reading days:
+    start: 2019-10-05
+    end: 2019-10-08
+  Exam 1: 2019-10-01
+  Exam 2: 2019-11-05
+  Exam 3: 2019-12-13
+
+meta:
+  timezone: America/New_York
+  name: COA1
+  lecture exam: true
+  home: https://www.cs.virginia.edu/luther/COA1/F2019/
+  final:
+    start: 2019-12-14 09:00:00
+    duration: 180
+    room: Thornton E303
+
+sections:
+  CS2501-002:
+    type: lecture
+    room: Thornton E303
+    days: [Monday, Wednesday, Friday]
+    start: 13:00:00
+    duration: 50
+
+lectures:
+    -   welcome
+    -   Boolean algebra
+    -   binary arithmetic
+    -   binary arithmetic
+
+    -   gates, wires, bitwise
+    -   mux, demux, adder
+    -   clocks
+    -   other hardware
+
+    -   moves, memory, ALU ops
+    -   fetch-decode-execute
+    -   writing machine code
+    -   conditional jump; back doors
+
+    -   addressing modes; endianness
+    -   adjacency; pointers
+    -   review 
+    
+    -   ISA and assembly; patents
+    -   x86-64
+    -   the stack
+    -   tracing variables
+
+    -   compilation
+    -   compile-time info
+
+    -   C introduction
+    -   C introduction
+    -   C introduction
+    -   C introduction
+    -   global, stack, heap
+    -   malloc and free
+
+    -   review
+    
+    -   malloc examples
+    -   C std library conventions
+    -   string.h
+    -   stdio.h and varargs
+    -   stdio.h and varargs
+    -   unistd.h and so on
+
+    -   Q&A
+
+    -   buffer overrun; reporting exploits
+    -   function pointers
+    -   defensive programming
+
+    -   defensive programming
+    -   languages safer than C
+    
+    -   review
+
+
+labs: 
+    - shell
+    - information theory
+    - hex editor
+    - simulator
+    - debugger
+    - bomb
+    - 'char*'
+    - fchat
+    - sockets
+    - cpp
+    - cpp
+
+
+
+reading:
+    
+    Review:
+        txt: topics list
+        lnk: review.html
+    Boolean algebra:
+        txt: Booleans §1--2
+        lnk: bool.html
+    binary arithmetic: 
+        txt: Bits §2.1--2.4
+        lnk: bits.html
+    gates, wires, bitwise: 
+        txt: Booleans §1--2, 4
+        lnk: bool.html
+    mux, demux, adder: 
+        txt: Booleans §3
+        lnk: bool.html
+    clocks: 
+        txt: Parts §2--3
+        lnk: parts.html
+    other hardware: 
+        txt: Parts §1--5
+        lnk: parts.html
+    addressing modes; endianness: 
+      - txt: ISA §3.3
+        lnk: isa.html
+      - txt: Bits §1--3
+        lnk: bits.html
+    
+    von Neumann model; state: 
+        txt: ISA §1--3
+        lnk: isa.html
+    fetch-decode-execute: 
+        txt: ISA §1--3
+        lnk: isa.html
+    moves, memory, ALU ops: 
+        txt: ISA §3.1
+        lnk: isa.html
+    conditional jump; back doors: 
+        txt: ISA §3.4
+        lnk: isa.html
+    the stack: 
+        txt: ISA §3.4.2
+        lnk: isa.html
+    
+    review: 
+        txt: review page
+        lnk: review.html
+
+    x86-64: 
+        txt: x86-64 summary
+        lnk: x86.html
+    tracing variables: 
+        txt: debugger example
+        lnk: cmdadd.html
+    
+    C introduction: 
+        - txt: wikipedia
+          lnk: https://en.wikipedia.org/wiki/C_syntax
+        - txt: language reference
+          lnk: c.html
+    "global, stack, heap": 
+        txt: memory writeup
+        lnk: memory.html
+    "malloc and free": 
+        txt: memory writeup
+        lnk: memory.html
+    C std library conventions: 
+        txt: writeup
+        lnk: manpage.html
+    function pointers: 
+      - txt: example from wikipedia
+        lnk: https://en.wikipedia.org/wiki/Function_pointer#Example_in_C
+      - txt: C++ virtual functions
+        lnk: vtable.html
+    defensive programming: 
+        txt: wikipedia
+        lnk: https://en.wikipedia.org/wiki/Defensive_programming
+
+assignments:
+    ".groups":
+        PA:
+            portion: "40"
+            late-policy: [0.9, 0.8]
+            total: 10
+        Lab:
+            portion: 10
+            drop: 1
+            rubric: {"kind":"percentage"}
+        Exam:
+            portion: "40"
+            rubric: {"kind":"percentage"}
+        Quiz:
+            portion: "10"
+            drop: 1
+            duration: -1
+            rubric: {"kind":"percentage"}
+            link: https://kytos.cs.virginia.edu/coa1-f2019/quizzes/
+
+    PA01:
+        title: bit fiddling
+        due: 2019-09-13 14:00:00
+        notes: things like "count the number of set bits in an int" using limited numbers of bitwise operations
+        rubric: {"kind":"percentage"}
+    PA02:
+        title: worksheet
+        due: 2019-09-20 14:00:00
+        total: 100
+        notes: 
+        rubric:
+            kind: breakdown
+            parts:
+                -   name: mux
+                    ratio: 25
+                    rubric:
+                        kind: breakdown
+                        parts:
+                            -   name: basic gates
+                                ratio: 10
+                                rubric: {"kind":"check"}
+                            -   name: wired like mux
+                                ratio: 10
+                                rubric: {"kind":"check"}
+                            -   name: correct use of nots
+                                ratio: 5
+                                rubric: {"kind":"check"}
+                -   name: sets of bits
+                    ratio: 50
+                    rubric:
+                        kind: breakdown
+                        parts:
+                            -   name: intersection
+                                ratio: 10
+                                rubric: {"kind":"check"}
+                            -   name: set minus
+                                ratio: 10
+                                rubric: {"kind":"check"}
+                            -   name: union 7
+                                ratio: 10
+                                rubric: {"kind":"check"}
+                            -   name: minus 7
+                                ratio: 10
+                                rubric: {"kind":"check"}
+                            -   name: contains 8
+                                ratio: 10
+                                rubric: {"kind":"check"}
+                -   name: shifter
+                    ratio: 25
+                    rubric:
+                        kind: breakdown
+                        parts:
+                            -   name: neat and readable
+                                ratio: 5
+                                rubric: {"kind":"check"}
+                            -   name: shifts right
+                                ratio: 10
+                                rubric: {"kind":"check"}
+                            -   name: sign extends
+                                ratio: 10
+                                rubric: {"kind":"check"}
+    PA03:
+        title: simulator
+        files: ['*.py', '*.java', 'fib.binary']
+        due: 2019-09-27 14:00:00
+        notes: in Java or Python, implement a toy machine language fetch/decode/execute simulator
+        total: 100
+        rubric:
+            kind: breakdown
+            parts:
+                -   name: simulator
+                    ratio: 25
+                    rubric: {"kind": "percentage"}
+                -   name: Fibonacci
+                    ratio: 75
+                    rubric: {"kind": "percentage"}
+
+    PA04:
+        title: assembly
+        files: 'matlib.s'
+        due: 2019-10-18 14:00:00
+        rubric:
+            kind: breakdown
+            parts:
+                -   name: code assembles, runs, and terminates
+                    ratio: 10
+                    rubric: {"kind":"check"}
+
+                -   name: product assembly is a good effort
+                    ratio: 10
+                    rubric: {"kind":"check"}
+                -   name: product has right answer
+                    ratio: 10
+                    rubric: {"kind":"check"}
+                -   name: product is iterative
+                    ratio: 10
+                    rubric: {"kind":"check"}
+                -   name: product does not use multiply instructions
+                    ratio: 10
+                    rubric: {"kind":"check"}
+                    
+                -   name: power assembly is a good effort
+                    ratio: 10
+                    rubric: {"kind":"check"}
+                -   name: power has right answer
+                    ratio: 10
+                    rubric: {"kind":"check"}
+                -   name: power is recursive
+                    ratio: 10
+                    rubric: {"kind":"check"}
+                -   name: power does not use multiply instructions or foreign functions
+                    ratio: 10
+                    rubric: {"kind":"check"}
+                -   name: power invokes product
+                    ratio: 10
+                    rubric: {"kind":"check"}
+
+    PA05:
+        title: 'bomb'
+        due: 2019-10-25 14:00:00
+    PA06:
+        title: smallc
+        files: smallfunc.c
+        due: 2019-11-01 14:00:00
+        rubric:
+            kind: breakdown
+            parts:
+                -   name: 1st correct function
+                    ratio: 20
+                    rubric: {"kind":"check"}
+                -   name: 2nd correct function
+                    ratio: 20
+                    rubric: {"kind":"check"}
+                -   name: 3rd correct function
+                    ratio: 20
+                    rubric: {"kind":"check"}
+                -   name: 4th correct function
+                    ratio: 20
+                    rubric: {"kind":"check"}
+                -   name: 5th correct function
+                    ratio: 20
+                    rubric: {"kind":"check"}
+
+    PA07:
+        title: linkedlist
+        files: linkedlist.c
+        due: 2019-11-15 14:00:00
+        rubric: {"kind":"percentage"}
+    PA08:
+        title: postfix
+        files: rpn.c
+        due: 2019-11-29 14:00:00
+    PA09:
+        title: schat
+        files: schat.c
+        due: 2019-12-06 14:00:00
+        rubric:
+            kind: breakdown
+            parts:
+                -   name: Has server and client code from lab
+                    ratio: 12.5
+                    rubric: {"kind":"check"}
+                -   name: Server uses result of accept()
+                    ratio: 12.5
+                    rubric: {"kind":"check"}
+                -   name: Client uses result of socket()
+                    ratio: 12.5
+                    rubric: {"kind":"check"}
+                -   name: Makes two struct pollfds
+                    ratio: 12.5
+                    rubric: {"kind":"check"}
+                -   name: fd are 0 and used socket
+                    ratio: 12.5
+                    rubric: {"kind":"check"}
+                -   name: events include POLLIN
+                    ratio: 12.5
+                    rubric: {"kind":"check"}
+                -   name: repeatedly invokes poll()
+                    ratio: 12.5
+                    rubric: {"kind":"check"}
+                -   name: read()s one descriptor, write()s another
+                    ratio: 12.5
+                    rubric: {"kind":"check"}
+
