@@ -63,7 +63,7 @@ The primary kinds of tasks are:
 
 |        | Instructor | TAs |
 |--------|------------|-----|
-| Name | Luther Tychonievich | Dylan Cao, William Mayes, James McDowell, Gustavo Moreira, Kelvin Peng, Omika Suryawanshi |
+| Name | Luther Tychonievich | Dylan Cao, Vineet Kalpathi, William Mayes, James McDowell, Gustavo Moreira, Omika Suryawanshi |
 | Location | Rice 208 | Thornton Stacks (A235) |
 | Office Hours | TBA | TBA  |
 | Phone | 243-3789 | (none) |
