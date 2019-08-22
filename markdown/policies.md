@@ -114,7 +114,7 @@ Letter  Student demonstrated                Recommendation re future courses
 A       mastery of all topics               likely to do well
 B       competence in significant topics    able to do well with some review
 C       sufficient competence               likely to be challenging
-D       minimal competence                  unlikely to succeed without retaking this course first
+D       minimal competence                  unlikely to succeed
 F       less than minimal competence        retake this course first
 
 These goals do not map perfectly to numeric scores. If you get full or nearly full points on all graded tasks, you should expect an A. If you miss non-trivial numbers of points or deadlines, we may attempt to assess your standing on this subjective scale in lieu of a raw point-based grade.
