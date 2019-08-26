@@ -102,7 +102,11 @@ lectures:
 
 
 labs: 
-    - shell
+    -
+        due: 2018-09-29
+        title: shell
+        notes: an overview with simple exercises
+        weight: 0
     - information theory
     - hex editor
     - simulator
