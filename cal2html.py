@@ -144,7 +144,7 @@ def raw2cal(data, links=None):
             })
             if 'link' in ent: ans[-1]['link'] = ent['link']
             # add data for submission server
-            
+        
         return ans
 
     ans = []
@@ -267,7 +267,14 @@ END:VEVENT'''.format(
                     ans.append(encode(event))
     ans.append('END:VCALENDAR\r\n')
     return '\r\n'.join(_.replace('\n','\r\n') for _ in ans)
-    
+
+def cal2assigments(cal):
+    for week in cal:
+        for day in week:
+            if day is not None:
+                for event in day['events']:
+                    print(event)
+
 if __name__ == '__main__':
     import os, os.path
     here = os.path.realpath(os.path.dirname(__file__))
@@ -284,3 +291,5 @@ if __name__ == '__main__':
 
     with open('markdown/cal.ics', 'w') as fh:
         fh.write(cal2ical(cal, course, raw['meta']['home'], tz=raw['meta']['timezone']))
+
+    cal2assigments(cal)

@@ -385,4 +385,27 @@ assignments:
                 -   name: read()s one descriptor, write()s another
                     ratio: 12.5
                     rubric: {"kind":"check"}
-
+    Quiz00:
+        due: 2019-09-02 11:00:00
+    Quiz01:
+        due: 2019-09-09 11:00:00
+    Quiz02:
+        due: 2019-09-16 11:00:00
+    Quiz03:
+        due: 2019-09-23 11:00:00
+    Quiz04:
+        due: 2019-10-09 11:00:00
+    Quiz05:
+        due: 2019-10-14 11:00:00
+    Quiz06:
+        due: 2019-10-21 11:00:00
+    Quiz07:
+        due: 2019-10-28 11:00:00
+    Quiz08:
+        due: 2019-11-11 11:00:00
+    Quiz09:
+        due: 2019-11-18 11:00:00
+    Quiz10:
+        due: 2019-11-25 11:00:00
+    Quiz11:
+        due: 2019-12-02 11:00:00
