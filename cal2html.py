@@ -286,6 +286,7 @@ def cal2assigments(cal,raw):
                         s = event['slug']
                         g = event['group']
                         dat = slug2asgn(s,g,raw)
+                        dat['group'] = g
                         ans[s] = dict(**dat)
     return ans
     
