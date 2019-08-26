@@ -55,6 +55,13 @@ Note the password prompts will accept what you type but not display it.
 
 # Short summary
 
+{.example ...}
+```bash
+scp myfile1.c myfile2.c mst3k@portal.cs.virginia.edu:project1/
+ssh mst3k@portal.cs.virginia.edu "cd project1/; clang *.c; ./a.out"
+```
+{/}
+
 Interactive Terminal
 :   Open with `ssh username@the.server.edu`
     
@@ -90,9 +97,3 @@ Copy files from remote to local
     {.example} `scp mst3k@portal.cs.virginia.edu:code/demo1/testfile.c ./`
 
 
-# Example for remote builds of local files
-
-```bash
-scp myfile1.c myfile2.c mst3k@portal.cs.virginia.edu:project1/
-ssh mst3k@portal.cs.virginia.edu "cd project1/; clang *.c; ./a.out"
-```
