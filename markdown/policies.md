@@ -105,17 +105,22 @@ The target difficulty is 5–10 hours of focused effort each week.
 
 ## Grading Goal
 
-In February 2019 the CS faculty approved [a definition](http://ugrads.cs.virginia.edu/grading-guidelines.html) of what we hope grades mean.
-It is my hope that we will approximate that definition in this course.
+In February 2019 the CS faculty approved [a definition](http://ugrads.cs.virginia.edu/grading-guidelines.html) of what we believe grades mean.
+It is my intent to approximate that definition in this course.
 As a brief summary,
 
-Letter  Student demonstrated                Recommendation re future courses
+Letter  Student demonstrated                Recommendation re future courses[^future]
 ------  ---------------------------         ------------------------------------
 A       mastery of all topics               likely to do well
 B       competence in significant topics    able to do well with some review
 C       sufficient competence               likely to be challenging
 D       minimal competence                  unlikely to succeed
 F       less than minimal competence        retake this course first
+
+[^future]:
+    The most obvious future course is COA2.
+    COA1 material is also directly important for work in various fields including
+    networks, cyber-physical systems, robotics, operating systems, and any constrained-resource or speed-sensitive application
 
 These goals do not map perfectly to numeric scores. If you get full or nearly full points on all graded tasks, you should expect an A. If you miss non-trivial numbers of points or deadlines, we may attempt to assess your standing on this subjective scale in lieu of a raw point-based grade.
 

@@ -81,7 +81,7 @@ table.agenda div.events { display: table-cell; vertical-align: middle; }
 .lab summary:before { content: "lab: "; font-size: 70.7%; }
 details.lab:before { content: ""; }
 small { opacity: 0.5; }
-.special, .exam { background: rgba(255,127,0,0.25); opacity: 0.75; }
+.special, .exam, .assignment:before { background: rgba(255,127,0,0.25); opacity: 0.75; }
 span.date { font-family:monospace; }
 details { padding-left: 1em; }
 summary { margin-left: -1em; }
