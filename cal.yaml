@@ -17,7 +17,7 @@ Special Dates:
 meta:
   timezone: America/New_York
   name: COA1
-  lecture exam: true
+  lecture exam: false
   home: https://www.cs.virginia.edu/luther/COA1/F2019/
   final:
     start: 2019-12-14 09:00:00
@@ -25,12 +25,25 @@ meta:
     room: Thornton E303
 
 sections:
-  CS2501-002:
+  CS2501-200:
     type: lecture
     room: Thornton E303
     days: [Monday, Wednesday, Friday]
     start: 13:00:00
     duration: 50
+  CS2501-201:
+    type: lab
+    room: MEC 213
+    days: [Wednesday]
+    start: 17:00:00
+    duration: 75
+  CS2501-202:
+    type: lab
+    room: MEC 213
+    days: [Thursday]
+    start: 17:00:00
+    duration: 75
+
 
 lectures:
     -   welcome

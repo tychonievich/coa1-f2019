@@ -7,8 +7,6 @@ It may be adjusted as the semester progresses to reflect actual pacing and uptak
 
 <hr/>
 
-<script src="schedule.js"></script>
-
 <style id="schedule-css">
 
 #schedule td, #schedule th { padding: 0ex; }
@@ -102,9 +100,11 @@ readings can be <input type="button" value="shown" onclick="document.querySelect
 
 
 
-
-
 {#include schedule.html}
+
+
+<script src="schedule.js"></script>
+
 
 To subscribe to the above calendar, add <http://www.cs.virginia.edu/luther/COA1/F2019/cal.ics> to your calender application of choice.
 
