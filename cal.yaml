@@ -102,6 +102,7 @@ lectures:
 
 
 labs: 
+    - no lab
     - shell
     - information theory
     - hex editor
