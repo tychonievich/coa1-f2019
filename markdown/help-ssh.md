@@ -37,7 +37,7 @@ Typing passwords is both less secure (key-sniffers, typos, typing wrong password
 
 You'll place a file on your computer and a file on the remote computer.
 They are matched, and each provides half of the work needed to do a job.
-When you log in, the remote computer will do half the work with its file, then send that to your computer to do the other half and return^[This is a gross over-simplification, but gets the core idea across. We'll see what's really going on in COA2].
+When you log in, the remote computer will do half the work with its file, then send that to your computer to do the other half and return^[This is a gross over-simplification, but gets the core idea across. We'll see what's really going on when we discuss digital certificates in COA2].
 
 ## Practice
 
@@ -46,9 +46,19 @@ with appropriate changes to `username@username@the.server.edu`;
 if on Windows, you also have to use `\` instead of `/`:
 
 ```bash
-ssh-keygen -f ~/.ssh/id_rsa
-ssh-copy-id -i ~/.ssh/id_rsa username@username@the.server.edu
+ssh-keygen -f ~/.ssh/id_rsa -t rsa -b 2048
+ssh-copy-id -i ~/.ssh/id_rsa.pub username@username@the.server.edu
 ```
+
+There is a slight chance that `~/.ssh` will not already exist. In that case `ssh-keygen` will fail; run 
+
+```bash
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+```
+
+and then re-run the above commands
+
 
 It should be safe to accept the defaults on each prompt except the password prompts.
 Note the password prompts will accept what you type but not display it.
