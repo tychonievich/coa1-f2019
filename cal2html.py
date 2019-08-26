@@ -132,7 +132,7 @@ def raw2cal(data, links=None):
             if 'due' not in ent: continue
             if ent['due'].date() != d: continue
             group = ent.get('group', re.match('^[A-Za-z]*',task).group(0))
-            tmp = data['assignments'].get('.groups',{}).get(group,{})
+            tmp = dict(data['assignments'].get('.groups',{}).get(group,{}))
             tmp.update(ent)
             ent = tmp
             ans.append({
@@ -141,6 +141,7 @@ def raw2cal(data, links=None):
                 'group':group,
                 'from':ent['due']-timedelta(0,900),
                 'to':ent['due'],
+                'slug':task,
             })
             if 'link' in ent: ans[-1]['link'] = ent['link']
             # add data for submission server
@@ -268,13 +269,26 @@ END:VEVENT'''.format(
     ans.append('END:VCALENDAR\r\n')
     return '\r\n'.join(_.replace('\n','\r\n') for _ in ans)
 
-def cal2assigments(cal):
+def slug2asgn(slug, group, raw):
+    ans = {}
+    ans.update(raw['assignments'].get('.groups').get(group,{}))
+    ans.update(raw['assignments'][slug])
+    return ans
+    
+
+def cal2assigments(cal,raw):
+    ans = {}
     for week in cal:
         for day in week:
             if day is not None:
                 for event in day['events']:
-                    print(event)
-
+                    if event.get('kind') == 'assignment':
+                        s = event['slug']
+                        g = event['group']
+                        dat = slug2asgn(s,g,raw)
+                        ans[s] = dict(**dat)
+    return ans
+    
 if __name__ == '__main__':
     import os, os.path
     here = os.path.realpath(os.path.dirname(__file__))
@@ -292,4 +306,6 @@ if __name__ == '__main__':
     with open('markdown/cal.ics', 'w') as fh:
         fh.write(cal2ical(cal, course, raw['meta']['home'], tz=raw['meta']['timezone']))
 
-    cal2assigments(cal)
+    import pjson
+    with open('assignments.json', 'w') as fh:
+        print(pjson.prettyjson(cal2assigments(cal, raw)), file=fh)

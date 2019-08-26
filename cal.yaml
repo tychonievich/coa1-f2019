@@ -228,7 +228,6 @@ assignments:
         title: worksheet
         due: 2019-09-20 14:00:00
         total: 100
-        notes: 
         rubric:
             kind: breakdown
             parts:
