@@ -79,10 +79,10 @@ lectures:
     -   C introduction
     -   global, stack, heap
     -   malloc and free
+    -   malloc examples
 
     -   review
     
-    -   malloc examples
     -   C std library conventions
     -   string.h
     -   stdio.h and varargs
