@@ -79,6 +79,7 @@ table.agenda div.events { display: table-cell; vertical-align: middle; }
 .assignment:before { content: "due: "; font-size: 70.7%; }
 .lab:before { content: "lab: "; font-size: 70.7%; }
 .lab summary:before { content: "lab: "; font-size: 70.7%; }
+details.lab:before { content: ""; }
 small { opacity: 0.5; }
 .special, .exam { background: rgba(255,127,0,0.25); opacity: 0.75; }
 span.date { font-family:monospace; }
