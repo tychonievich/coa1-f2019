@@ -7,6 +7,8 @@ It may be adjusted as the semester progresses to reflect actual pacing and uptak
 
 <hr/>
 
+<script src="schedule.js"></script>
+
 <style id="schedule-css">
 
 #schedule td, #schedule th { padding: 0ex; }
