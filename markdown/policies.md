@@ -93,7 +93,6 @@ quizzes to be taken based on the reading prior to the lecture in which they are 
 This course will teach you the basics of x86-64 assembly
 and quite a bit of C.
 There will be multiple assignments dealing with each.
-the assignment.
 
 Estimating how long it will take someone to complete a coding assignment
 is always difficult.

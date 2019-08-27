@@ -39,7 +39,7 @@ You'll place a file on your computer and a file on the remote computer.
 They are matched, and each provides half of the work needed to do a job.
 When you log in, the remote computer will do half the work with its file, then send that to your computer to do the other half and return^[This is a gross over-simplification, but gets the core idea across. We'll see what's really going on when we discuss digital certificates in COA2].
 
-## Practice
+## Setup
 
 The following commands should work on any system with SSH installed,
 with appropriate changes to `username@username@the.server.edu`;
@@ -59,9 +59,12 @@ chmod 700 ~/.ssh
 
 and then re-run the above commands
 
-
 It should be safe to accept the defaults on each prompt except the password prompts.
 Note the password prompts will accept what you type but not display it.
+
+### Multiple machines
+
+You'll need to do the `ssh-keygen` once per client machine you use (e.g., you laptop)
 
 # Short summary
 
