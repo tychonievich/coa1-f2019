@@ -91,7 +91,7 @@ VI
     To begin learning VI, go to <https://www.openvim.com/> and follow along.
     Then SSH into any system that supports it (the wargames servers do, for example, though they do not support saving files), type `vim`, and try it out. You'll probably need a cheat-sheet to remember all the keys: <https://vim.rtorr.com/>.
     
-    You can also (from SSH) running `vimtutor` instead if you want a different approach to learning VI.
+    You can also try running `vimtutor` from a shell for a different approach to learning VI.
     
     VI comes with Linux and MacOS, and can be downloaded for Windows: <https://www.vim.org/download.php>
 
