@@ -135,7 +135,7 @@ Different tasks and different task types are given different weight, as outlined
 |Lab         |  10% |
 |Exams       |  40% |
 
-If you earn at least 93% of the points, you will earn an A. If you earn less, you will likely be given a lower grade based on the [Grading Goals]. We expect this will approximate the usual 10%-per-letter breakdown, but will attempt to diagnose particular learning outcomes and mastery levels rather than being constrained to pure mechanical grade computation.
+If you earn at least 93% of the points, you will earn an A. If you earn less, you will likely be given a lower grade based on the [Grading Goals](#grading-goals). We expect this will approximate the usual 10%-per-letter breakdown, but will attempt to diagnose particular learning outcomes and mastery levels rather than being constrained to pure mechanical grade computation.
 
 
 ## Submitting late
