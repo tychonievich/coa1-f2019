@@ -75,7 +75,7 @@ A text editor is a tool designed for editing text, only. They typically provide 
 There are three main CLI editors in common use today:
 
 EMACS
-:   This was one of the first widely-used powerful CLI editors (released 1976).
+:   EMACS was one of the first widely-used powerful CLI editors (released 1976).
     It has a large set of features and an idiosyncratic set of commands, many of which involve pressing Ctrl+X followed by another Ctrl+something command.
     
     As EMACS has lost popularity in the past decade, more and more servers choose not to install it.
@@ -83,7 +83,7 @@ EMACS
     EMACS comes with Linux, and can be downloaded for Windows and obtained via homebrew for MacOS: <https://www.gnu.org/software/emacs/download.html>
 
 VI
-:   Or more commonly the updated version VIM (1979) is probably the most widely used today.
+:   VI (released 1979), or more commonly the updated version VIM, is probably the most widely used CLI editor today.
     It has a large set of features and an idiosyncratic set of commands involving two modes:
     "normal" mode where virtually every letter and number key has a special meaning and often a special meaning in a sequence
     and "insert" mode where those same keys instead type.
@@ -96,7 +96,7 @@ VI
     VI comes with Linux and MacOS, and can be downloaded for Windows: <https://www.vim.org/download.php>
 
 GNU nano
-:   A much simpler (i.e. both easier to learn and less powerful) editor with more traditional key commands and an on-screen summary of the most used commands.
+:   GNU nano (released 2000) is a much simpler (i.e. both easier to learn and less powerful) editor than the other two, with more traditional key commands and an on-screen summary of the most-used commands.
     
     To learn `nano`, SSH into any system that supports it (the wargames servers do, for example, though they do not support saving files), type `nano`, and follow the on-screen instructions.
     
