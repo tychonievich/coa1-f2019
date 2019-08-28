@@ -76,7 +76,7 @@ There are three main CLI editors in common use today:
 
 EMACS
 :   This was one of the first widely-used powerful CLI editors (released 1976).
-    It has a large set of features and an idiosyncratic set of commands, many of which involve pressing Ctrl+C followed by another Ctrl+something command.
+    It has a large set of features and an idiosyncratic set of commands, many of which involve pressing Ctrl+X followed by another Ctrl+something command.
     
     As EMACS has lost popularity in the past decade, more and more servers choose not to install it.
 
@@ -103,7 +103,7 @@ GNU nano
     Note that in the instructions `^X` means Ctrl+X and `M-X` means Alt+X (or Esc X if you are on MacOS and Alt does not work for you).
     
     Nano comes with Linux and an old version comes with MacOS;
-    it can be downloaded for Windows (via the [chocolatey package manager](https://chocolatey.org/)) by typing the following two commands into the PowerShell app:
+    it can be downloaded for Windows (via the [chocolatey package manager](https://chocolatey.org/)) by typing the following two lines into the PowerShell app:
     
     1. `Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`{.powershell}
     2. `choco install nano`{.powershell}
