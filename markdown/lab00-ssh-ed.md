@@ -27,7 +27,7 @@ Irix                    open a terminal and use the built-in `ssh` command
 
 ## Learn basic shell with a tutorial/game
 
-SSH gives you a shell; shells have long been ubiquitous tools in all systems except Windows, and they are increasingly use in Windows too.
+SSH gives you a shell; shells have long been ubiquitous tools in all systems except Windows, and they are increasingly used in Windows too.
 The shell is sometimes also called the "command line" or the "console".
 
 Visit <http://web.mit.edu/mprat/Public/web/Terminus/Web/main.html>, a somewhat cheesy introduction to the basics of the command line. Explore it until you
