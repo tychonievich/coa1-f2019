@@ -103,11 +103,9 @@ GNU nano
     Note that in the instructions `^X` means Ctrl+X and `M-X` means Alt+X (or Esc X if you are on MacOS and Alt does not work for you).
     
     Nano comes with Linux and an old version comes with MacOS;
-    it can be downloaded for Windows (via the [chocolatey package manager](https://chocolatey.org/)) by typing the following commands into the PowerShell app:
+    it can be downloaded for Windows (via the [chocolatey package manager](https://chocolatey.org/)) by typing the following two commands into the PowerShell app:
     
-    ````powershell
-    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-    choco install nano
-    ````
+    1. `Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`{.powershell}
+    2. `choco install nano`{.powershell}
 
 Become sufficiently familiar with at least one of these editors that you can open, modify, and save files.
