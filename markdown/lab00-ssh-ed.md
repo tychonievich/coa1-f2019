@@ -32,7 +32,7 @@ The shell is sometimes also called the "command line" or the "console".
 
 Visit <http://web.mit.edu/mprat/Public/web/Terminus/Web/main.html>, a somewhat cheesy introduction to the basics of the command line. Explore it until you
 
-- feel comfortable with the use of `ls`, `pwd`, `cd` (including `cd ..`), and less
+- feel comfortable with the use of `ls`, `pwd`, `cd` (including `cd ..`), and `less`
 - have learned about `mv` and `man`
 
 There is a lot more you can do (creating a magic locker, explore a hidden tunnel, learn about `grep` and `rm`, etc.) but those are the most important basics.
