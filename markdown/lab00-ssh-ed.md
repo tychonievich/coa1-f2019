@@ -98,7 +98,7 @@ VI
 GNU nano
 :   GNU nano (released 2000) is a much simpler (i.e. both easier to learn and less powerful) editor than the other two, with more traditional key commands and an on-screen summary of the most-used commands.
     
-    To learn `nano`, SSH into any system that supports it (the wargames servers do, for example, though they do not support saving files), type `nano`, and follow the on-screen instructions.
+    To learn nano, SSH into any system that supports it (the wargames servers do, for example, though they do not support saving files), type `nano`, and follow the on-screen instructions.
     
     Note that in the instructions `^X` means Ctrl+X and `M-X` means Alt+X (or Esc X if you are on MacOS and Alt does not work for you).
     
