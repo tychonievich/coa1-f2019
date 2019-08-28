@@ -123,8 +123,8 @@ def raw2cal(data, links=None):
                     n = os.path.basename(f)
                     n = n[n.find('-')+1:]
                     ans[-1].setdefault('reading',[]).append({'txt':n,'lnk':f})
-                if 'video' in links: ans[-1]['video'] = f['video']
-                if 'audio' in links: ans[-1]['audio'] = f['audio']
+                if 'video' in links[d]: ans[-1]['video'] = links[d]['video']
+                if 'audio' in links[d]: ans[-1]['audio'] = links[d]['audio']
 
         # handle assignments
         for task,ent in data['assignments'].items():
