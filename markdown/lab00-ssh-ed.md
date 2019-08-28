@@ -9,7 +9,7 @@ There is no check-off or other grade process for this pseudo-lab.
 
 SSH (**S**ecure **SH**ell) is a ubiquitous tool for running arbitrary programs on remote machines.
 We will use it extensively this semester.
-It comes bundled with a few related tools, like SCP (**S**ecure *C**o**P**y), that we will also use.
+It comes bundled with a few related tools, like SCP (**S**ecure **C**o**P**y), that we will also use.
 
 ## Accessing the SSH tool
 
