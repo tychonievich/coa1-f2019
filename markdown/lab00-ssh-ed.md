@@ -65,6 +65,11 @@ and consult <http://overthewire.org/wargames/bandit/bandit0.html> to get started
 
 We suggest getting to level 4 of Bandit, though you might find other levels and games there interesting.
 
+{.aside ...}
+At some point you should get an email from the CS department with a CS login.
+You should be able to use that to SSH into mst3k`@portal.cs.virginia.edu`, an account we will use many times this semester.
+{/}
+
 # CLI Editor
 
 Sometimes you need to edit a file on a remote computer over SSH.
