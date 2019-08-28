@@ -137,6 +137,7 @@ Different tasks and different task types are given different weight, as outlined
 
 If you earn at least 93% of the points, you will earn an A. If you earn less, you will likely be given a lower grade based on the [Grading Goals](#grading-goals). We expect this will approximate the usual 10%-per-letter breakdown, but will attempt to diagnose particular learning outcomes and mastery levels rather than being constrained to pure mechanical grade computation.
 
+Grade estimates will be provided on the submission site, accurately reflecting individual assignment performance but being only estimates of overall course grade.
 
 ## Submitting late
 
