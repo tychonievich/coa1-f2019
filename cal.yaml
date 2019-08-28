@@ -102,8 +102,8 @@ lectures:
 
 
 labs: 
-    - no lab
     - shell
+    - 
     - information theory
     - hex editor
     - simulator
@@ -120,8 +120,8 @@ labs:
 reading:
 
     shell:
-        txt: lab writeup
-        lnk: lab01-shell.html
+        txt: at-home lab writeup
+        lnk: lab00-ssh-ed.html
     
     Review:
         txt: topics list
