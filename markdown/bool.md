@@ -50,7 +50,8 @@ Not
 
 [^not]: Technically, the small circle is the "not" part; the triangle is sort of like a filler for when there is no other gate to which the circle may be adjoined. 
 
-{.aside} The code symbol for "bitwise not" is `~`, the "tilde", which looks a lot like the "similar to" symbol ∼, the "most positive" symbol ∾, and the "alternating current" symbol ∿; fortunately, which one is meant can usually be inferred from context. The code symbol also has inconsistent representation across typefaces, sometimes being almost indistinguishable from a dash `−` or rendered as a small diacritic mark `˜`.
+{.aside ...} The code symbol for "bitwise not" is `~`, the "tilde", which looks a lot like the "similar to" symbol ∼, the "most positive" symbol ∾, and the "alternating current" symbol ∿; fortunately, which one is meant can usually be inferred from context. The code symbol also has inconsistent representation across typefaces, sometimes being almost indistinguishable from a dash `−` or rendered as a small diacritic mark `˜`.
+{/}
 
 There are two commonly identified operations that take as input two bits.
 
@@ -157,7 +158,8 @@ Exclusive Or
 
      Exclusive or is also the operation that computes parity, as discussed [above](#parity-checksums-error-correction-codes-and-digests).
 
-{.aside} The code symbol for "exclusive or" is `^`, the "carat" or "circumflex", which looks a lot like the logical symbol for "and": ∧, the "wedge"; unfortunately, context does not help much in knowing which was meant. The code symbol also has inconsistent representation across typefaces, varying in size and position; some represent it almost like a capital lambda `Λ`, while others render it as a small diacritic mark `ˆ`.
+{.aside ...} The code symbol for "exclusive or" is `^`, the "carat" or "circumflex", which looks a lot like the logical symbol for "and": ∧, the "wedge"; unfortunately, context does not help much in knowing which was meant. The code symbol also has inconsistent representation across typefaces, varying in size and position; some represent it almost like a capital lambda `Λ`, while others render it as a small diacritic mark `ˆ`.
+{/}
 
 Implies
 
