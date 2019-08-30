@@ -118,7 +118,7 @@ def raw2cal(data, links=None):
                         ans[-1]['reading'] = [tmp]
                 ent['sidx'] += 1
             # handle separate links file
-            if links and d in links:
+            if links and d in links and ent['type'] == 'lecture':
                 for f in links[d].get('files',[]):
                     n = os.path.basename(f)
                     n = n[n.find('-')+1:]
