@@ -222,12 +222,12 @@ assignments:
 
     HW01:
         title: bit fiddling
-        due: 2019-09-13 14:00:00
+        due: 2019-09-17 17:00:00
         notes: things like "count the number of set bits in an int" using limited numbers of bitwise operations
         rubric: {"kind":"percentage"}
     HW02:
         title: worksheet
-        due: 2019-09-20 14:00:00
+        due: 2019-09-20 13:00:00
         total: 100
         rubric:
             kind: breakdown
@@ -283,7 +283,7 @@ assignments:
     HW03:
         title: simulator
         files: ['*.py', '*.java', 'fib.binary']
-        due: 2019-09-27 14:00:00
+        due: 2019-09-31 17:00:00
         notes: in Java or Python, implement a toy machine language fetch/decode/execute simulator
         total: 100
         rubric:
@@ -299,7 +299,7 @@ assignments:
     HW04:
         title: assembly
         files: 'matlib.s'
-        due: 2019-10-18 14:00:00
+        due: 2019-10-15 17:00:00
         rubric:
             kind: breakdown
             parts:
@@ -338,11 +338,11 @@ assignments:
 
     HW05:
         title: 'bomb'
-        due: 2019-10-25 14:00:00
+        due: 2019-10-22 17:00:00
     HW06:
         title: smallc
         files: smallfunc.c
-        due: 2019-11-01 14:00:00
+        due: 2019-10-29 17:00:00
         rubric:
             kind: breakdown
             parts:
@@ -365,16 +365,16 @@ assignments:
     HW07:
         title: linkedlist
         files: linkedlist.c
-        due: 2019-11-15 14:00:00
+        due: 2019-11-12 17:00:00
         rubric: {"kind":"percentage"}
     HW08:
         title: postfix
         files: rpn.c
-        due: 2019-11-29 14:00:00
+        due: 2019-11-26 17:00:00
     HW09:
         title: schat
         files: schat.c
-        due: 2019-12-06 14:00:00
+        due: 2019-12-03 17:00:00
         rubric:
             kind: breakdown
             parts:
@@ -437,6 +437,7 @@ assignments:
     Quiz11:
         due: 2019-12-02 11:00:00
         open: 2019-11-25 17:00:00
+
     Exam 1:
         open: 2019-10-02 17:00:00
         due: 2019-10-03 18:15:00
