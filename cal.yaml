@@ -283,7 +283,7 @@ assignments:
     HW03:
         title: simulator
         files: ['*.py', '*.java', 'fib.binary']
-        due: 2019-09-31 17:00:00
+        due: 2019-10-01 17:00:00
         notes: in Java or Python, implement a toy machine language fetch/decode/execute simulator
         total: 100
         rubric:
