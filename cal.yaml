@@ -103,8 +103,7 @@ lectures:
 
 labs: 
     - shell
-    - 
-    - information theory
+    - git and information theory
     - hex editor
     - simulator
     - debugger
@@ -120,8 +119,11 @@ labs:
 reading:
 
     shell:
-        txt: at-home lab writeup
+        txt: at-home lab description
         lnk: lab00-ssh-ed.html
+    git and information theory:
+        txt: in-lab description
+        lnk: lab01-git-infotheory.html
     
     Review:
         txt: topics list
