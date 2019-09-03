@@ -181,7 +181,7 @@ Compile and run your program
 
 ## Task for this lab
 
-1. Create a git project with a copy on your laptop and on the server, as described under "[Creating a project]{#creating-a-project)" above
+1. Create a git project with a copy on your laptop and on the server, as described under "[Creating a project](#creating-a-project)" above
 
 On your laptop, in the directory of this new project, create a file named `lab01` that contains
 
