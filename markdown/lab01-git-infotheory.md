@@ -158,22 +158,22 @@ Let's go through this step by step, assuming you start in Terminal/PowerShell in
 :   Tell `git` to update it's internal copy of the files you've added and label this change "I changed a few files".
     Using good descriptive labels becomes more important as project teams grow.
     
-    You can add and commit in one step if you have only modified (not added) files by using `git commit -a -m "fixed typos"`
+    You can add and commit in one step if you have only modified (not added) files by using `git commit -a -m "fixed typos"`{.bash}
 
-`git pull`
+`git pull`{.bash}
 :   Now that git knows what you've done on your laptop, have it check to see if some other computer has also made changes that you'll need to merge.
-    We don't expect that to happen very often this semester, but you should get into the practice of *always* `git pull` before `git push`.
+    We don't expect that to happen very often this semester, but you should get into the practice of *always* `git pull`{.bash} before `git push`{.bash}.
 
-`git push`
+`git push`{.bash}
 :   As git to send your changes to the master repository on the remote server
 
-`ssh mst3k@portal.cs.virginia.edu`
+`ssh mst3k@portal.cs.virginia.edu`{.bash}
 :   Move over to the server
 
-`cd coa1-code`
+`cd coa1-code`{.bash}
 :   Enter the server's project directory
 
-`git pull`
+`git pull`{.bash}
 :   Grab the code you just pushed from your laptop into the server's copy
 
 Compile and run your program
@@ -181,12 +181,15 @@ Compile and run your program
 
 ## Task for this lab
 
-Follow the above steps to get a file named `lab01` that says
+1. Create a git project with a copy on your laptop and on the server, as described under "[Creating a project]{#creating-a-project)" above
+
+On your laptop, in the directory of this new project, create a file named `lab01` that contains
 
     I wrote this on my laptop! Hooray!
 
-from your laptop onto the server, and show the TAs you did so.
-One easy way to show this is to `ssh` into the server, go to your project directory, and type the following
+then use commands from "[Laptop → git → CS server](#laptop-git-cs-server)" above to get it into git and onto the server's version of the project.
+Then show the TAs you did so.
+One way to show this is to `ssh` into the server, go to your project directory, and type the following
 
 ```bash
 ls -l
