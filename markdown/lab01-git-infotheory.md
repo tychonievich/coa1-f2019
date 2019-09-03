@@ -191,7 +191,7 @@ One easy way to show this is to `ssh` into the server, go to your project direct
 ```bash
 ls -l
 pwd
-ls -l ~
+ls -ld ~
 git status
 cat lab01
 ```
