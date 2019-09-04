@@ -211,7 +211,7 @@ cat lab01
 
 ## Tutorials
 
-There are several tutorials you may find useful. Don't feel that you have to do all of these (unless you want to and/or you need to still learn it), but you should at least do one all the way through and glance at a couple others.
+There are several tutorials you may find useful. Don't feel that you have to do all of these (unless you want to and/or you need to still learn it), but doing at least one all the way through may help you feel more confident.
 You should probably do them on your own time, though, not during lab time.
 
 1. <https://git-scm.com/docs/gittutorial>
