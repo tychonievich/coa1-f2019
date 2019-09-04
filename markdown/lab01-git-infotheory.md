@@ -75,6 +75,7 @@ You can find out your user name with `whoami` and your group memberships with `g
 
 You should set up your home directory so only you can access it, not other people in your group nor strangers not in your group:
 
+After `ssh`ing into the CS server, run the following commands:
 
 ````bash
 cd              # go home
