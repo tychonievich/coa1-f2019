@@ -37,7 +37,7 @@ ssh-keygen -f ~/.ssh/id_rsa -t rsa -b 2048
 ssh-copy-id -i ~/.ssh/id_rsa.pub username@the.server.edu
 ```
 
-There is a slight chance that `~/.ssh` will not already exist. In that case `ssh-keygen` will fail; run 
+There is a slight chance that `~/.ssh` will not already exist. In that case `ssh-keygen` will fail; if you see such a failure you can fix it by running 
 
 ```bash
 mkdir ~/.ssh
