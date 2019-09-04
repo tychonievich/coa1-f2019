@@ -19,6 +19,7 @@ You should be able to
     - we don't care which CLI editor you use: nano, vim, emacs, any is fine.
 1. Access `portal.cs.virginia.edu` via `ssh`
     - If you want to use `ssh` without the need to re-type your password each time, see [our ssh help sheet](help-ssh.html#using-key-pairs-instead-of-passwords)
+    - If your password isn't working, try <https://www.cs.virginia.edu/PasswordReset>; if that still doesn't work, contact your professor via email
 1. recognize 
     - `.` as meaning "the current directory"
     - `..` as meaning "the directory containing the current directory"
