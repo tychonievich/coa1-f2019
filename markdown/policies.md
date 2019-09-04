@@ -65,7 +65,7 @@ The primary kinds of tasks are:
 |--------|------------|-----|
 | Name | Luther Tychonievich | Dylan Cao, Vineet Kalpathi, William Mayes, James McDowell, Gustavo Moreira, Omika Suryawanshi |
 | Location | Rice 208 | Thornton Stacks (A235) |
-| Office Hours | TBA | Wednesday 14:00–15:00<br/>Thursday 9:30–11:30, 12:30–14:30, 18:30–21:00<br/>Friday9:00–10:00, 14:00–16:00<br/>Saturday 12:00–14:00, 15:00–16:00  |
+| Office Hours | Monday 10:00–11:00<br/>Tuesday 13:00–15:00<br/>Friday 11:00–12:00 | Wednesday 14:00–15:00<br/>Thursday 9:30–11:30, 12:30–14:30, 18:30–21:00<br/>Friday9:00–10:00, 14:00–16:00<br/>Saturday 12:00–14:00, 15:00–16:00  |
 | Phone | 243-3789 | (none) |
 | Email | <a href="mailto:tychonievich@virginia.edu?subject=COA1">tychonievich@virginia.edu</a> | use [Piazza](https://piazza.com/class/jyzxml4m9ls3km) |
 
