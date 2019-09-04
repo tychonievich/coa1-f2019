@@ -4,19 +4,6 @@ title: Using SSH
 
 SSH (the **S**ecure **SH**ell) is a protocol for allowing people to access a computer over the Internet and run programs on it as if they were physically present.
 
-# Introductory Game
-
-Visit <http://overthewire.org/wargames/> and read.
-Many of the pages list web resources to help you learn more.
-
-If you don't like reading (☹), try
-
-````bash
-$ ssh bandit0@bandit.labs.overthewire.org -p 2220
-````
-
-and consult <http://overthewire.org/wargames/bandit/bandit0.html> to get started.
-
 # Software
 
 If you are running      Then you should use
@@ -68,7 +55,8 @@ You'll need to do the `ssh-keygen` once per client machine you use (e.g., you la
 
 # Short summary
 
-{.example ...}
+{.example ...} The following copies files to the CS SSH portal, then compiles and runs them on the server and displays the output on your laptop.
+
 ```bash
 scp myfile1.c myfile2.c mst3k@portal.cs.virginia.edu:project1/
 ssh mst3k@portal.cs.virginia.edu "cd project1/; clang *.c; ./a.out"
