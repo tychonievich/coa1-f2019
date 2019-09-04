@@ -29,12 +29,12 @@ When you log in, the remote computer will do half the work with its file, then s
 ## Setup
 
 The following commands should work on any system with SSH installed,
-with appropriate changes to `username@username@the.server.edu`;
+with appropriate changes to `username@the.server.edu`;
 if on Windows, you also have to use `\` instead of `/`:
 
 ```bash
 ssh-keygen -f ~/.ssh/id_rsa -t rsa -b 2048
-ssh-copy-id -i ~/.ssh/id_rsa.pub username@username@the.server.edu
+ssh-copy-id -i ~/.ssh/id_rsa.pub username@the.server.edu
 ```
 
 There is a slight chance that `~/.ssh` will not already exist. In that case `ssh-keygen` will fail; run 
