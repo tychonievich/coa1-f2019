@@ -148,44 +148,46 @@ def raw2cal(data, links=None):
             if 'link' in ent: ans[-1]['link'] = ent['link']
         
         # handle office hours
-        ## find
-        oh = {}
-        for kind,meta in data.get('office hours',{}).items():
-            for staff,det in meta.items():
-                if staff == 'where': continue
-                for ent in det['when']:
-                    if ((('dow' in ent and d.weekday() == dow(ent['dow']))
-                            or ('date' in ent and d == ent['date']))
-                        and d not in ent.get('except',[])
-                    ):
-                        if 'where' in det:
-                            oh.setdefault(staff+' OH ('+det['where']+')',{
-                                'where':det['where'],
-                                'when':[]
-                            })['when'].append((ent['start'],ent['end']))
-                        else:
-                            oh.setdefault(kind+' OH ('+meta['where']+')',{
-                                'where':meta['where'],
-                                'when':[]
-                            })['when'].append((ent['start'],ent['end']))
-        ## combine
-        for k in oh:
-            oh[k]['when'].sort()
-            tmp = [oh[k]['when'][0]]
-            for s,e in oh[k]['when'][1:]:
-                if s <= tmp[-1][1]: tmp[-1] = (tmp[-1][0], e)
-                else: tmp.append((s,e))
-            oh[k]['when'] = tmp
-        ## add to events
-        for k in oh:
-            for s,e in oh[k]['when']:
-                ans.append({
-                    'title':k[:k.find(' (')] if ' (' in k else k,
-                    'kind':'office hours',
-                    'from':dt + timedelta(0,s),
-                    'to':dt + timedelta(0,e),
-                    'where':oh[k]['where'],
-                })
+        if data.get('office hours',{}).get('.begin', d) <= d:
+            ## find
+            oh = {}
+            for kind,meta in data.get('office hours',{}).items():
+                if kind[0] == '.': continue
+                for staff,det in meta.items():
+                    if staff == 'where': continue
+                    for ent in det['when']:
+                        if ((('dow' in ent and d.weekday() == dow(ent['dow']))
+                                or ('date' in ent and d == ent['date']))
+                            and d not in ent.get('except',[])
+                        ):
+                            if 'where' in det:
+                                oh.setdefault(staff+' OH ('+det['where']+')',{
+                                    'where':det['where'],
+                                    'when':[]
+                                })['when'].append((ent['start'],ent['end']))
+                            else:
+                                oh.setdefault(kind+' OH ('+meta['where']+')',{
+                                    'where':meta['where'],
+                                    'when':[]
+                                })['when'].append((ent['start'],ent['end']))
+            ## combine
+            for k in oh:
+                oh[k]['when'].sort()
+                tmp = [oh[k]['when'][0]]
+                for s,e in oh[k]['when'][1:]:
+                    if s <= tmp[-1][1]: tmp[-1] = (tmp[-1][0], e)
+                    else: tmp.append((s,e))
+                oh[k]['when'] = tmp
+            ## add to events
+            for k in oh:
+                for s,e in oh[k]['when']:
+                    ans.append({
+                        'title':k[:k.find(' (')] if ' (' in k else k,
+                        'kind':'office hours',
+                        'from':dt + timedelta(0,s),
+                        'to':dt + timedelta(0,e),
+                        'where':oh[k]['where'],
+                    })
         
         return ans
 
