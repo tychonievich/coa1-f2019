@@ -24,7 +24,7 @@ Typing passwords is both less secure (key-sniffers, typos, typing wrong password
 
 You'll place a file on your computer and a file on the remote computer.
 They are matched, and each provides half of the work needed to do a job.
-When you log in, the remote computer will do half the work with its file, then send that to your computer to do the other half and return^[This is a gross over-simplification, but gets the core idea across. We'll see what's really going on when we discuss digital certificates in COA2].
+When you log in, the remote computer will do half the work with its file, then send that to your computer to do the other half, then send it back, thus allowing both computers to be confident the other computer is who it says it is^[This is a gross over-simplification, but gets the core idea across. We'll see what's really going on when we discuss digital certificates in COA2].
 
 ## Setup
 
