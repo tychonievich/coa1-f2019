@@ -17,6 +17,10 @@ You should be able to
 1. Navigate in a shell, into and out of directories, listing what is in a directory and seeing its contents
 1. Edit files from the shell
 1. Access `portal.cs.virginia.edu` via `ssh`
+1. recognize 
+    - `.` as meaning "the current directory"
+    - `..` as meaning "the directory containing the current directory"
+    - `~` as meaning "my home directory" -- i.e., `/u/lab/mst3k`
 
 If you are unsure of any part of this, please talk to a TA in lab. You take priority over people working on later parts of this lab.
 
