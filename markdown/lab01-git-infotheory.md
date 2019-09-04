@@ -216,7 +216,7 @@ You should probably do them on your own time, though, not during lab time.
 
 1. <https://git-scm.com/docs/gittutorial>
 1. <https://try.github.io/>
-1. <https://learngitbranching.js.org/
+1. <https://learngitbranching.js.org/>
 1. <https://rogerdudler.github.io/git-guide/>
 1. <https://guides.github.com/introduction/flow/>
 1. <https://guides.github.com/activities/hello-world/>
