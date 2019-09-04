@@ -68,7 +68,8 @@ Interactive Terminal
     
     Close with `exit` or Ctrl+D
     
-    {.example} `ssh mst3k@portal.cs.virginia.edu`
+    {.example ...} `ssh mst3k@portal.cs.virginia.edu`
+    {/}
 
 Run remote command and see output
 :   `ssh username@the.server.edu command arg1 arg2 ...`
@@ -77,24 +78,29 @@ Run remote command and see output
     
     `ssh username@the.server.edu "commands to execute"`
 
-    {.example} `ssh mst3k@portal.cs.virginia.edu ls -l`
-    
-    {.example} `ssh mst3k@portal.cs.virginia.edu "cd /tmp; ls"`
+    {.example ...} `ssh mst3k@portal.cs.virginia.edu ls -l`
+    {/}
+
+    {.example ...} `ssh mst3k@portal.cs.virginia.edu "cd /tmp; ls"`
+    {/}
 
 Copy files from local to remote
 :   `scp file file2 file3 ... user@the.server.edu:path/to/destination/`
 
-    {.example} `scp testfile.c mst3k@portal.cs.virginia.edu:code/demo1/`
+    {.example ...} `scp testfile.c mst3k@portal.cs.virginia.edu:code/demo1/`
+    {/}
     
     Note that `scp` will not create directories, but `ssh` can:
     
-    {.example} `ssh mst3k@portal.cs.virginia.edu mkdir -p code/demo1/`
+    {.example ...} `ssh mst3k@portal.cs.virginia.edu mkdir -p code/demo1/`
+    {/}
 
 Copy files from remote to local
 :   `scp user@the.server.edu:path/to/source/filename path/to/destination/`
     
     (use `./` for "put it where I am")
 
-    {.example} `scp mst3k@portal.cs.virginia.edu:code/demo1/testfile.c ./`
+    {.example ...} `scp mst3k@portal.cs.virginia.edu:code/demo1/testfile.c ./`
+    {/}
 
 
