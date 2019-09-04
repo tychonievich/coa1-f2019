@@ -24,6 +24,84 @@ meta:
     duration: 180
     room: Thornton E303
 
+office hours:
+  faculty:
+    Tychonievich:
+      where: Rice 208
+      when:
+        - dow: Monday
+          start: 10:00:00
+          end: 11:00:00
+        - dow: Tuesday
+          start: 13:00:00
+          end: 15:00:00
+        - dow: Friday
+          start: 11:00:00
+          end: 12:00:00
+          except: [2019-09-06]
+  TA:
+    where: Thorton A235
+    Omika:
+      when:
+        - dow: Thursday
+          start: 9:30:00
+          end: 11:30:00
+    Gustavo:
+      when:
+        - dow: Wednesday
+          start: 14:00:00
+          end: 15:00:00
+        - dow: Thursday
+          start: 18:30:00
+          end: 21:00:00
+        - dow: Friday
+          start: 9:00:00
+          end: 10:00:00
+        - dow: Friday
+          start: 14:00:00
+          end: 16:00:00
+        - dow: Saturday
+          start: 15:00:00
+          end: 16:00:00
+    Dylan:
+      when:
+        - dow: Thursday
+          start: 15:30:00
+          end: 16:30:00
+        - dow: Friday
+          start: 14:00:00
+          end: 15:00:00
+    Jack:
+      when:
+        - dow: Thursday
+          start: 12:30:00
+          end: 14:30:00
+        - dow: Saturday
+          start: 12:00:00
+          end: 14:00:00
+          except: [2019-09-07]
+        - date: 2019-09-06
+          start: 12:00:00
+          end: 13:00:00
+    Will:
+      when:
+        - dow: Friday
+          start: 14:00:00
+          end: 16:00:00
+        - dow: Saturday
+          start: 12:00:00
+          end: 14:00:00      
+          except: [2019-09-07]
+        - date: 2019-09-06
+          start: 12:00:00
+          end: 13:00:00
+    Vineet:
+      when:
+        - dow: Thursday
+          start: 12:30:00
+          end: 14:30:00
+      
+
 sections:
   CS2501-200:
     type: lecture
