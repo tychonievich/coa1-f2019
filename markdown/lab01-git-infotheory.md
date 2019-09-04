@@ -117,6 +117,26 @@ Git is a versatile tool that does many useful things; among them are
     - you can "pull", saying "remote computer, what have you done lately?"
     - In general you have to both pull and push if you want your copy nad the remote copy to become the same.
 
+### `user.name` and `user.email`
+
+Git is designed for collaboration, so it does not allow anonymous contributions. Hence, you have to tell it a name and email, either once per project or once for all projects on your computer.
+
+Per project
+:   While inside the git project directory created by `git clone`, run the following commands:
+
+    ````bash
+    git config user.name "mst3k"
+    git config user.email "mst3k@virginia.edu"
+    ````
+
+Per computer
+:   From anywhere, rung
+    
+    ````bash
+    git config --global user.name "mst3k"
+    git config --global user.email "mst3k@virginia.edu"
+    ````
+
 ## Most common case
 
 ### Creating a project
@@ -140,6 +160,9 @@ You'll only need to do this once in this course, so we'll only give a little exp
     git clone mst3k@portal.cs.virginia.edu:coa1-code.git
     cd coa1-code
     ````
+    
+    If you have not set up a global username and email, you should then set those for this project (see [`user.name` and `user.email`](#user-name-and-user-email))
+
 
 1.  Create a working copy on the server
     
