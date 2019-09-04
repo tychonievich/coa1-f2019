@@ -67,7 +67,7 @@ dt { font-weight: bold; }
 dd { margin-left: 1em; }
 dd + dt { margin-top: 1ex; }
 .floater { float:right; max-width: 50%; text-align: right; }
-pre { padding: 1ex; margin: 1ex 0ex; word-break: break-all; word-wrap: break-word; white-space: pre-wrap;  background: rgba(0,0,0,0.04); border: 0.125ex solid #e3e3e3; min-height: 1em; border-radius: 0.5ex; box-shadow: 0 0.0625ex 0.125ex rgba(0,0,0,0.25); }
+pre { padding: 1ex; margin: 1ex 0ex; white-space: pre-wrap;  background: rgba(0,0,0,0.04); border: 0.125ex solid #e3e3e3; min-height: 1em; border-radius: 0.5ex; box-shadow: 0 0.0625ex 0.125ex rgba(0,0,0,0.25); }
 
 /*blockquote { border-left: 0.5ex solid rgba(0,0,0,0.125); padding-left: 1.5ex; margin: 1ex 0ex; }*/
 blockquote { border:1px solid rgba(0,0,0,0.125); padding:1ex; border-radius:1ex; background-color:rgba(0,0,0,0.04); margin:1em 4em; }
@@ -79,7 +79,7 @@ figure { max-width: 100%; display: table; margin: auto; padding: 1em; }
 figcaption { text-align: center; font-weight: bold; margin-top: 1ex; }
 .floater img, figure img { max-width: 100%; }
 
-pre,code { background: rgba(0,0,0,0.04); border: 0.125ex solid rgba(0,0,0,0.12); border-radius: 0.5ex; word-wrap: wrap-word; white-space: pre-wrap; word-break: break-all; hyphens:none; }
+pre,code { background: rgba(0,0,0,0.04); border: 0.125ex solid rgba(0,0,0,0.12); border-radius: 0.5ex; white-space: pre-wrap; hyphens:none; }
 pre > code { border: none; background:none; }
 pre { display:table; }
 
