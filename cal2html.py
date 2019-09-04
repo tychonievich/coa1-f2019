@@ -186,7 +186,6 @@ def raw2cal(data, links=None):
                     'to':dt + timedelta(0,e),
                     'where':oh[k]['where'],
                 })
-                print(ans[-1], s, e)
         
         return ans
 
