@@ -17,7 +17,7 @@ You should be able to
 1. Navigate in a shell, into and out of directories, listing what is in a directory and seeing its contents
 1. Edit files from the shell
 1. Access `portal.cs.virginia.edu` via `ssh`
-    - If you want to use `ssh` without the need to re-type your password each time, see [our git help sheet](help-git.html#using-key-pairs-instead-of-passwords)
+    - If you want to use `ssh` without the need to re-type your password each time, see [our ssh help sheet](help-ssh.html#using-key-pairs-instead-of-passwords)
 1. recognize 
     - `.` as meaning "the current directory"
     - `..` as meaning "the directory containing the current directory"
