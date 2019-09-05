@@ -29,7 +29,7 @@ table.oh tbody tr:nth-child(2n+1) { background: linear-gradient(to right, rgba(0
 <script src="moment.min.js" type="text/javascript"></script>
 <script src="cal-oh.js" type="text/javascript"></script>
 <script type="text/javascript">//<!--
-now = new Date().toISOString()
+now = new Date().toISOString().substring(0,10);
 week = new Date(); week.setDate(week.getDate() + 7); week = week.toISOString()
 within = document.getElementById('cal-oh')
 oh_feed.forEach(x => {
