@@ -25,7 +25,7 @@ table.oh td { text-align: center; }
 table.oh tbody tr:nth-child(2n+1) { background: linear-gradient(to right, rgba(0,0,0,0.03125), rgba(0,0,0,0)); }
 .oh.ta { background-color: rgba(0,255,127,0.125); }
 .oh.faculty { background-color: rgba(0,127,255,0.125); }
-tr.Sun, tr.Mon, tr.Tue, tr.Wed, tr.Thu, tr.Fri, tr.Sat { border-top: thin solid black; }
+tr.Sun, tr.Mon, tr.Tue, tr.Wed, tr.Thu, tr.Fri, tr.Sat { border-top: thick solid rgba(0,0,0,0.25); }
 tr.Sun + tr.Sun, tr.Mon + tr.Mon, tr.Tue + tr.Tue, tr.Wed + tr.Wed, tr.Thu + tr.Thu, tr.Fri + tr.Fri, tr.Sat + tr.Sat { border-top: none; }
 </style>
 <script src="moment.min.js" type="text/javascript"></script>
