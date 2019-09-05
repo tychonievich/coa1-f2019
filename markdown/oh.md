@@ -19,6 +19,7 @@ week = new Date(); week.setDate(now.getDate() + 7);
 within = document.getElementById('cal=oh')
 oh_feed.forEach(x => {
     if (x.end < now || x.start > week) return;
+    console.log(x)
     let entry = document.createElement('div')
     entry.classList.add('oh')
     entry.classList.add(x['title'].split(' ')[0] == 'TA' ? 'ta' : 'faculty')
