@@ -26,8 +26,8 @@ within = document.getElementById('cal-oh')
 oh_feed.forEach(x => {
     if (x.end < now || x.start > week) return;
     console.log(x)
-    s = new Date(e.start)
-    e = new Date(e.end)
+    s = new Date(x.start)
+    e = new Date(x.end)
     tr = within.insertRow()
     tr.insertCell().innerText = moment(x.start).calendar()
     let entry = tr.insertCell()
