@@ -22,7 +22,7 @@ Upcoming office hours (for the next week):
 table.oh { margin: auto; }
 table.oh thead td { border-bottom: thin solid black; }
 table.oh td { text-align: center; }
-table.oh tbody tr:nth-child(2n+1) { background: linear-gradient(to right, rgba(0,0,0,0.125), rgba(0,0,0,0)); }
+table.oh tbody tr:nth-child(2n+1) { background: linear-gradient(to right, rgba(0,0,0,0.0625), rgba(0,0,0,0)); }
 .oh.ta { background-color: rgba(0,255,127,0.125); }
 .oh.faculty { background-color: rgba(0,127,255,0.125); }
 </style>
