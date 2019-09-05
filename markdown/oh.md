@@ -17,7 +17,7 @@ The queue is open even when TAs are not present; see [contact information](polic
 </tbody>
 </table>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es-us.js" type="text/javascript"></script>
+<script src="moment.min.js" type="text/javascript"></script>
 <script src="cal-oh.js" type="text/javascript"></script>
 <script type="text/javascript">//<!--
 now = new Date().toISOString()
