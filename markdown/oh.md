@@ -45,10 +45,10 @@ oh_feed.forEach(x => {
     if ('link' in x) {
         let a = document.createElement('a')
         a.href = x['link']
-        a.innerText = x['title']
+        a.innerText = x['title'].replace(/\bOH\b/g, '').trim()
         entry.appendChild(a);
     } else {
-        entry.innerText = x['title']
+        entry.innerText = x['title'].replace(/\bOH\b/g, '').trim()
     }
     tr.insertCell().innerText = moment(x.start).format('h:mm a')
     tr.insertCell().innerText = moment(x.end).format('h:mm a')
