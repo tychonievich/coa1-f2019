@@ -120,22 +120,25 @@ Git is a versatile tool that does many useful things; among them are
 ### `user.name` and `user.email`
 
 Git is designed for collaboration, so it does not allow anonymous contributions. Hence, you have to tell it a name and email, either once per project or once for all projects on your computer.
+This information is visible only to other people who have access to your git project.
 
 Per project
-:   While inside the git project directory created by `git clone`, run the following commands:
+:   While inside the git project directory created by `git clone`, run the following commands, using your name and email ID instead of those in the example:
 
     ````bash
-    git config user.name "mst3k"
+    git config user.name "Dana Wahoo"
     git config user.email "mst3k@virginia.edu"
     ````
 
 Per computer
-:   From anywhere, rung
+:   From anywhere, run the following commands, using your name and email ID instead of those in the example:
     
     ````bash
-    git config --global user.name "mst3k"
+    git config --global user.name "Dana Wahoo"
     git config --global user.email "mst3k@virginia.edu"
     ````
+
+Git will complain if you try to `git commit` without having done this.
 
 ## Most common case
 

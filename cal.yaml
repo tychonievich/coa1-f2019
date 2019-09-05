@@ -299,7 +299,7 @@ assignments:
             drop: 1
             duration: -1
             rubric: {"kind":"percentage"}
-            link: https://kytos.cs.virginia.edu/coa1-f2019/quizzes/
+            link: https://kytos.cs.virginia.edu/coa1/quizzes/
 
     HW01:
         title: bit fiddling
