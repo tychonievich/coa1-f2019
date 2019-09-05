@@ -12,12 +12,18 @@ The queue is open even when TAs are not present; see [contact information](polic
 
 Upcoming office hours (for the next week):
 
-<table>
+<table class="oh">
 <thead><tr><th>Day</th><th>Starts</th><th>Kind</th><th>Ends</th></tr></thead>
 <tbody id="cal-oh">
 </tbody>
 </table>
 
+<style>
+table.oh { margin: auto; }
+table.oh td { text-align: center; }
+.oh.ta { background-color: rgba(0,255,127,0.25); }
+.oh.faculty { background-color: rgba(0,127,255,0.25); }
+</style>
 <script src="moment.min.js" type="text/javascript"></script>
 <script src="cal-oh.js" type="text/javascript"></script>
 <script type="text/javascript">//<!--
