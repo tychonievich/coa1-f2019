@@ -10,7 +10,7 @@ The queue is open even when TAs are not present; see [contact information](polic
 
 <div style="display:table; font-size:200%; margin: 1em auto; padding:1ex; box-shadow: 0 1px 10px rgba(0,0,0,.1); border: thin solid #eee; border-radius:1ex; background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);">[Get TA Help](https://kytos.cs.virginia.edu/ohq/?c=coa1)</div>
 
-<div id="cal-oh"></div>
+<div id="cal-oh" style="display:none"></div>
 
 <script src="cal-oh.js" type="text/javascript"></script>
 <script type="text/javascript">//<!--
