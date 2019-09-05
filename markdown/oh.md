@@ -42,6 +42,6 @@ oh_feed.forEach(x => {
     } else {
         entry.innerText = x['title']
     }
-    tr.insertCell().innerText = moment(x.end).calendar()
+    tr.insertCell().innerText = moment(x.end).format('D MMM, h:mm a')
 })
 //--></script>
