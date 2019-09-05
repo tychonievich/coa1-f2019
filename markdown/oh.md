@@ -30,7 +30,7 @@ oh_feed.forEach(x => {
     s = new Date(x.start)
     e = new Date(x.end)
     tr = within.insertRow()
-    tr.insertCell().innerText = moment(x.start).format('D MMM, h:mm a')
+    tr.insertCell().innerText = moment(x.start).format('e D MMM, h:mm a')
     let entry = tr.insertCell()
     entry.classList.add('oh')
     entry.classList.add(x['title'].split(' ')[0] == 'TA' ? 'ta' : 'faculty')
