@@ -13,7 +13,7 @@ The queue is open even when TAs are not present; see [contact information](polic
 Upcoming office hours (for the next week):
 
 <table class="oh">
-<thead><tr><th>Day</th><th>Starts</th><th>Kind</th><th>Ends</th></tr></thead>
+<thead><tr><th>Day</th><th>Kind</th><th>Starts</th><th>Ends</th></tr></thead>
 <tbody id="cal-oh">
 </tbody>
 </table>
@@ -38,7 +38,6 @@ oh_feed.forEach(x => {
     e = new Date(x.end)
     tr = within.insertRow()
     tr.insertCell().innerText = moment(x.start).format('ddd D MMM')
-    tr.insertCell().innerText = moment(x.start).format('h:mm a')
     let entry = tr.insertCell()
     entry.classList.add('oh')
     entry.classList.add(x['title'].split(' ')[0] == 'TA' ? 'ta' : 'faculty')
@@ -50,6 +49,7 @@ oh_feed.forEach(x => {
     } else {
         entry.innerText = x['title']
     }
+    tr.insertCell().innerText = moment(x.start).format('h:mm a')
     tr.insertCell().innerText = moment(x.end).format('h:mm a')
 })
 //--></script>
