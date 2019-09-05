@@ -183,7 +183,7 @@ def raw2cal(data, links=None):
                 for s,e in oh[k]['when']:
                     ans.append({
                         'title':k[:k.find(' (')] if ' (' in k else k,
-                        'kind':'office hours',
+                        'kind':'oh',
                         'from':dt + timedelta(0,s),
                         'to':dt + timedelta(0,e),
                         'where':oh[k]['where'],
@@ -207,13 +207,13 @@ def cal2html(cal):
     for week in cal:
         ans.append('<tr class="week">')
         for day in week:
-            if day is not None and not all(_.get('kind') == 'office hours' for _ in day['events']):
+            if day is not None and not all(_.get('kind') == 'oh' for _ in day['events']):
                 ans.append('<td class="day" date="{}">'.format(day['date'].strftime('%Y-%m-%d')))
                 ans.append('<div class="wrapper">')
                 ans.append('<span class="date w{1}">{0}</span>'.format(day['date'].strftime('%d %b').strip('0'), day['date'].strftime('%w')))
                 ans.append('<div class="events">')
                 for e in day['events']:
-                    if e.get('kind') == 'office hours': continue
+                    if e.get('kind') == 'oh': continue
                     classes = [e[k] for k in ('section','kind','group') if k in e]
                     title = e.get('title','TBA')
                     if type(title) is list: title = ' <small>and</small> '.join(title)
@@ -249,7 +249,25 @@ def cal2html(cal):
     external = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path fill="#fff" stroke="#36c" d="M1.5 4.518h5.982V10.5H1.5z"/><path fill="#36c" d="M5.765 1H11v5.39L9.427 7.937l-1.31-1.31L5.393 9.35l-2.69-2.688 2.81-2.808L4.2 2.544z"/><path fill="#fff" d="M9.995 2.004l.022 4.885L8.2 5.07 5.32 7.95 4.09 6.723l2.882-2.88-1.85-1.852z"/></svg>'
     return re.sub(r'(<a[^>]*href="[^"]*//[^"]*"[^<]*)</a>', r'\1'+external+'</a>', ''.join(ans))
 
-
+def cal2fullcal(cal, keep=lambda x:True):
+    """see https://fullcalendar.io/docs/event-object"""
+    ans = []
+    for week in cal:
+        for day in week:
+            if day is not None:
+                for event in day['events']:
+                    if keep(event):
+                        ans.append({
+                            'id':'evt'+str(len(ans)),
+                            'start':event['from'].strftime('%Y-%m-%dT%H:%M:%S'),
+                            'end':event['to'].strftime('%Y-%m-%dT%H:%M:%S'),
+                            'title':event['title'],
+                            'classNames':['cal-'+event['kind']],
+                            'editable':False,
+                        })
+                        if 'link' in event: ans[-1]['url'] = event['link']
+    ans.sort(key=lambda x:x['start'])
+    return ans
 
 def cal2ical(cal, course, home, tz=None, sections=None, stamp=None):
     if tz is None: tz = 'America/New_York'
@@ -357,5 +375,9 @@ if __name__ == '__main__':
         fh.write(cal2ical(cal, course, raw['meta']['home'], tz=raw['meta']['timezone']))
 
     import pjson
+    with open('markdown/cal-oh.js', 'w') as fh:
+        fh.write('oh_feed = ')
+        fh.write(pjson.prettyjson(cal2fullcal(cal, keep=lambda x : x['kind'] == 'oh')))
+
     with open('assignments.json', 'w') as fh:
         print(pjson.prettyjson(cal2assigments(cal, raw)), file=fh)
