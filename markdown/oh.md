@@ -13,7 +13,7 @@ The queue is open even when TAs are not present; see [contact information](polic
 Upcoming office hours (for the next week):
 
 <table class="oh">
-<thead><tr><th>Day</th><th>Kind</th><th>Starts</th><th>Ends</th></tr></thead>
+<thead><tr><th>Day</th><th>Whom</th><th>Starts</th><th>Ends</th></tr></thead>
 <tbody id="cal-oh">
 </tbody>
 </table>
