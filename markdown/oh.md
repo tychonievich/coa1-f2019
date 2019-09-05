@@ -16,7 +16,7 @@ The queue is open even when TAs are not present; see [contact information](polic
 <script type="text/javascript">//<!--
 now = new Date().toISOString()
 week = new Date(); week.setDate(week.getDate() + 7); week = week.toISOString()
-within = document.getElementById('cal=oh')
+within = document.getElementById('cal-oh')
 oh_feed.forEach(x => {
     if (x.end < now || x.start > week) return;
     console.log(x)
