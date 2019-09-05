@@ -20,6 +20,7 @@ Upcoming office hours (for the next week):
 
 <style>
 table.oh { margin: auto; }
+table.oh thead td { border-bottom: thin solid black; }
 table.oh td { text-align: center; }
 .oh.ta { background-color: rgba(0,255,127,0.25); }
 .oh.faculty { background-color: rgba(0,127,255,0.25); }
