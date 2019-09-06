@@ -283,7 +283,7 @@ reading:
 
 assignments:
     ".groups":
-        HW:
+        PA:
             portion: "40"
             late-policy: [0.9, 0.8]
             total: 10
@@ -301,12 +301,12 @@ assignments:
             rubric: {"kind":"percentage"}
             link: https://kytos.cs.virginia.edu/coa1/quizzes/
 
-    HW01:
+    PA01:
         title: bit fiddling
         due: 2019-09-17 17:00:00
         notes: things like "count the number of set bits in an int" using limited numbers of bitwise operations
         rubric: {"kind":"percentage"}
-    HW02:
+    PA02:
         title: worksheet
         due: 2019-09-20 13:00:00
         total: 100
@@ -361,7 +361,7 @@ assignments:
                             -   name: sign extends
                                 ratio: 10
                                 rubric: {"kind":"check"}
-    HW03:
+    PA03:
         title: simulator
         files: ['*.py', '*.java', 'fib.binary']
         due: 2019-10-01 17:00:00
@@ -377,7 +377,7 @@ assignments:
                     ratio: 75
                     rubric: {"kind": "percentage"}
 
-    HW04:
+    PA04:
         title: assembly
         files: 'matlib.s'
         due: 2019-10-15 17:00:00
@@ -417,10 +417,10 @@ assignments:
                     ratio: 10
                     rubric: {"kind":"check"}
 
-    HW05:
+    PA05:
         title: 'bomb'
         due: 2019-10-22 17:00:00
-    HW06:
+    PA06:
         title: smallc
         files: smallfunc.c
         due: 2019-10-29 17:00:00
@@ -443,16 +443,16 @@ assignments:
                     ratio: 20
                     rubric: {"kind":"check"}
 
-    HW07:
+    PA07:
         title: linkedlist
         files: linkedlist.c
         due: 2019-11-12 17:00:00
         rubric: {"kind":"percentage"}
-    HW08:
+    PA08:
         title: postfix
         files: rpn.c
         due: 2019-11-26 17:00:00
-    HW09:
+    PA09:
         title: schat
         files: schat.c
         due: 2019-12-03 17:00:00
