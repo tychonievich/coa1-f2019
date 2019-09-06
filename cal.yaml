@@ -187,6 +187,7 @@ labs:
     - git and information theory
     - hex editor
     - simulator
+    - tools help
     - debugger
     - bomb
     - 'char*'
