@@ -210,34 +210,34 @@ reading:
         txt: topics list
         lnk: review.html
     Boolean algebra:
-        txt: Booleans §1--2
+        txt: Booleans §1–2
         lnk: bool.html
     binary arithmetic: 
-        txt: Bits §2.1--2.4
+        txt: Bits §2.1–2.4
         lnk: bits.html
     gates, wires, bitwise: 
-        txt: Booleans §1--2, 4
+        txt: Booleans §1–2, 4
         lnk: bool.html
     mux, demux, adder: 
         txt: Booleans §3
         lnk: bool.html
     clocks: 
-        txt: Parts §2--3
+        txt: Parts §2–3
         lnk: parts.html
     other hardware: 
-        txt: Parts §1--5
+        txt: Parts §1–5
         lnk: parts.html
     addressing modes; endianness: 
       - txt: ISA §3.3
         lnk: isa.html
-      - txt: Bits §1--3
+      - txt: Bits §1–3
         lnk: bits.html
     
     von Neumann model; state: 
-        txt: ISA §1--3
+        txt: ISA §1–3
         lnk: isa.html
     fetch-decode-execute: 
-        txt: ISA §1--3
+        txt: ISA §1–3
         lnk: isa.html
     moves, memory, ALU ops: 
         txt: ISA §3.1
