@@ -303,6 +303,7 @@ assignments:
 
     PA01:
         title: bit fiddling
+        link: pa01-bit fiddling.html
         due: 2019-09-17 17:00:00
         notes: things like "count the number of set bits in an int" using limited numbers of bitwise operations
         rubric: {"kind":"percentage"}
