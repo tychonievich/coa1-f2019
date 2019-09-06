@@ -31,7 +31,7 @@ tr.Sun + tr.Sun, tr.Mon + tr.Mon, tr.Tue + tr.Tue, tr.Wed + tr.Wed, tr.Thu + tr.
 <script src="moment.min.js" type="text/javascript"></script>
 <script src="cal-oh.js" type="text/javascript"></script>
 <script type="text/javascript">//<!--
-now = new Date().toISOString().substring(0,10);
+now = new Date(); now.setMinutes(now.getMinutes() - now.getTimezoneOffset()); now = now.toISOString();
 week = new Date(); week.setDate(week.getDate() + 7); week = week.toISOString()
 within = document.getElementById('cal-oh')
 oh_feed.forEach(x => {
