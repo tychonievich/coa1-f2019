@@ -10,6 +10,11 @@ title: Information Theory Lab
 
 Please work through these in order, as the first is most important and not quite finishing the last shouldn't be too much of a problem.
 
+{.exercise ...}
+Read and understand everything written on this page.
+Do the activities listed in exercise boxes like this.
+{/}
+
 # Lab 00 review
 
 You should be able to
@@ -84,14 +89,17 @@ You can find out your user name with `whoami` and your group memberships with `g
 
 You should set up your home directory so only you can access it, not other people in your group nor strangers not in your group:
 
+{.exercise ...}
 After `ssh`ing into the CS server (i.e., `ssh mst3k@portal.cs.virginia.edu`{.bash}), run the following commands:
+
+> **Warning**: Be careful in typing. If you accidentally remove write access to yourself (via `a-w` or `u-w`) you will not be able to fix it; we'll have to contact the systems staff to do that instead.
 
 ````bash
 cd              # go home
 chmod g-rwx .   # remove group-access to read, write, and execute this directory
 chmod o-rwx .   # remove other-access to read, write, and execute this directory
 ````
-
+{/}
 
 # `git` introduction
 
@@ -159,6 +167,14 @@ You'll only need to do this once in this course, so we'll only give a little exp
     exit
     ````
 
+1.  Create a working copy of that project on the server
+    
+    ````bash
+    cd ~
+    git clone mst3k@portal.cs.virginia.edu:coa1-code.git
+    exit
+    ````
+
 1.  Create your local working copy of that project
     
     ````bash
@@ -169,15 +185,22 @@ You'll only need to do this once in this course, so we'll only give a little exp
     If you have not set up a global username and email, you should then set those for this project (see [`user.name` and `user.email`](#user-name-and-user-email))
 
 
-1.  Create a working copy on the server
-    
-    ````bash
-    ssh mst3k@portal.cs.virginia.edu
-    git clone mst3k@portal.cs.virginia.edu:coa1-code.git
-    exit
-    ````
-
 We may have you use projects we've made for you later in the semester, which uses step 2 of the above.
+
+{.exercise ...} As a summary, the steps listed above that you should actually do are
+
+1. `ssh` your-computing-id`@portal.cs.virginia.edu`
+1. `mkdir coa1-code.git`
+1. `cd coa1-code.git`
+1. `git init --bare`
+1. `cd ~`
+1. `git clone` your-computing-id`@portal.cs.virginia.edu:coa1-code.git`
+1. `exit`
+1. `git clone` your-computing-id`@portal.cs.virginia.edu:coa1-code.git`
+1. `cd coa1-code`
+1. `git config user.name "`Your Full Name`"`
+1. `git config user.email "`your-computing-id`@virginia.edu"`
+{/}
 
 ### Laptop → git → CS server
 
@@ -217,11 +240,14 @@ Compile and run your program
 
 ## Task for this lab
 
-1. Create a git project with a copy on your laptop and on the server, as described under "[Creating a project](#creating-a-project)" above
+Create a git project with a copy on your laptop and on the server, as described under "[Creating a project](#creating-a-project)" above
 
 On your laptop, in the directory of this new project, create a file named `lab01` that contains
 
     I wrote this on my laptop! Hooray!
+
+{.aside ...} Don't know how to make a file? See [Lab 00 "CLI Editor"](lab00-ssh-ed.html#cli-editor)
+{/}
 
 then use commands from "[Laptop → git → CS server](#laptop-git-cs-server)" above to get it into git and onto the server's version of the project.
 Then show the TAs you did so.
@@ -236,6 +262,26 @@ cat lab01
 ```
 
 ... then call over a TA to show them the results.
+
+{.exercise ...}
+Since you already created a project in the last exercise,
+
+1. `cd` into your project directory
+1. use an editor to make a file, as described in Lab 00.
+1. use git to `add` that file, `commit` the addition, and `push` it to the server
+1. `ssh` into the server
+1. `cd` into your project directory on the server
+1. use git to `pull` the changes you previously pushed
+1. call over a TA to show you succeeded by showing them the output of
+    
+    ````bash
+    ls -l
+    pwd
+    ls -ld ~
+    git status
+    cat lab01
+    ````
+{/}
 
 ## Tutorials
 
