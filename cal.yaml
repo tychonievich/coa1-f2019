@@ -206,6 +206,9 @@ reading:
     git and information theory:
         txt: in-lab description
         lnk: lab01-git-infotheory.html
+    hex editor:
+        txt: in-lab description
+        lnk: lab02-hex-editor.html
     
     Review:
         txt: topics list
