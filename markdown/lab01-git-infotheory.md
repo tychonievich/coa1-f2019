@@ -307,7 +307,7 @@ For example, you might try
 - [tarzan.txt](files/tarzan.txt) (500KB) -- the original Tarzan book by Edgar Rice Burroughs.
 - [pi.txt](files/pi.txt) (1MB) -- the first million digits of pi.
 - [_pydecimal.py](files/_pydecimal.py) (229KB)-- a large file from the Python standard library.
-- [diff_patch_match.java](files/diff_patch_match.java) (89KB) -- a large file from the open source Java project [diff-match-patch](https://github.com/google/diff-match-patch).
+- [diff_match_patch.java](files/diff_match_patch.java) (89KB) -- a large file from the open source Java project [diff-match-patch](https://github.com/google/diff-match-patch).
 
 Add a comment to the top of your code that includes at least the following:
 
