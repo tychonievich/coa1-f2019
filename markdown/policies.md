@@ -85,6 +85,8 @@ Readings written by us or selected from articles or web pages will periodically 
 Some of these may have "reading quizzes" associated with them:
 quizzes to be taken based on the reading prior to the lecture in which they are discussed.
 
+If you desire additional resources, I recommend the textbook *Introduction to Computer Systems: From Bits and Gate to C/C++ & Beyond* by Yale Patt and Sanjay Patel. That book contains all of the major topics we'll cover, with a different presentation than we'll cover them.
+
 ## Coding
 
 > "If you really want to understand something, the best way is to try and explain it to someone else. That forces you to sort it out in your own mind. And the more slow and dim-witted your pupil, the more you have to break things down into more and more simple ideas. And that’s really the essence of programming. By the time you’ve sorted out a complicated idea into little steps that even a stupid machine can deal with, you’ve certainly learned something about it yourself."

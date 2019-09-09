@@ -25,7 +25,9 @@ You should be able to
     - `..` as meaning "the directory containing the current directory"
     - `~` as meaning "my home directory" -- i.e., `/u/lab/mst3k`
 
+{.exercise ...}
 If you are unsure of any part of this, please talk to a TA in lab. You take priority over people working on later parts of this lab.
+{/}
 
 ## One more step: changing permissions
 
@@ -52,7 +54,7 @@ It has multiple ways to be used, but a few simple examples are
 
 ````bash
 chmod a+r foo   # all users can read foo
-chmod a-w foo   # no user can write foo
+chmod o-x foo   # out-of-group users cannot execute foo
 chmod u+w foo   # the owning user can write foo
 ````
 
