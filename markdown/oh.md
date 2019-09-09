@@ -9,7 +9,7 @@ If I'm engaged with a student, don't just wait silently in the hall; ask me if y
 
 1. Find when a professor is free
 2. Go to that professor's office
-3. Make sure the professor knows you are there and are waiting
+3. Come inside, or if it is full make sure the professor knows you are there and are waiting
 {/}
 
 
