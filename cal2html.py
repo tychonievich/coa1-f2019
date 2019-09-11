@@ -264,6 +264,7 @@ def cal2fullcal(cal, keep=lambda x:True):
                             'title':event['title'],
                             'classNames':['cal-'+event['kind']],
                             'editable':False,
+                            'location':event['where'],
                         })
                         if 'link' in event: ans[-1]['url'] = event['link']
     ans.sort(key=lambda x:x['start'])
@@ -356,7 +357,51 @@ def cal2assigments(cal,raw):
                         dat['group'] = g
                         ans[s] = dict(**dat)
     return ans
-    
+
+def coursegrade_json(data):
+    groups = data['assignments'].get('.groups', {})
+    weights, drops, inc, exc = {}, {}, {}, {}
+    for k,v in groups.items():
+        if 'portion' in v:
+            weights[k] = v['portion']
+        else:
+            weights[k] = 0
+        if type(weights[k]) is str:
+            try:
+                weights[k] = eval(weights[k].replace('%','/100'))
+            except: pass
+        if 'drop' in v:
+            drops[k] = v['drop']
+        if 'include' in v:
+            inc[k] = v['include']
+        if 'exclude' in v:
+            exc[k] = v['exclude']
+    for k,v in drops.items():
+        if type(v) is str:
+            v = eval(v.replace('%','/100'))
+        if v < 1:
+            cnt = 0
+            for k,v in assignments_json(data).items():
+                if v.get('group','') == k: cnt += 1
+            v *= cnt
+        drops[k] = int(round(v))
+    return {'letters':[
+        # {'A+':0.98},
+        {'A' :0.93},
+        {'A-':0.90},
+        {'B+':0.86},
+        {'B' :0.83},
+        {'B-':0.80},
+        {'C+':0.76},
+        {'C' :0.73},
+        {'C-':0.70},
+        {'D+':0.66},
+        {'D' :0.63},
+        {'D-':0.60},
+        {'F' :0.00},
+    ],'weights':weights,'drops':drops,'includes':inc,'excludes':exc}
+
+
 if __name__ == '__main__':
     import os, os.path
     here = os.path.realpath(os.path.dirname(__file__))
@@ -381,3 +426,6 @@ if __name__ == '__main__':
 
     with open('assignments.json', 'w') as fh:
         print(pjson.prettyjson(cal2assigments(cal, raw)), file=fh)
+
+    with open('coursegrade.json', 'w') as f:
+        f.write(pjson.prettyjson(coursegrade_json(raw), maxinline=16))
