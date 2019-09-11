@@ -38,7 +38,7 @@ bottom
     For full credit, use ≤ 40 operations from {`!`, `~`, `+`, `*`, `<<`, `>>`, `&`, `^`, `|`}.
 
 anybit
-:   Given `x`, set `y` to `1` if any bit in `x` is `1`; set `y` to `0` if `x` is all `0`s."
+:   Given `x`, set `y` to `1` if any bit in `x` is `1`; set `y` to `0` if `x` is all `0`s.
 
     For full credit, use ≤ 40 operations from {`~`, `+`, `-`, `<<`, `>>`, `&`, `^`, `|`}.
 
