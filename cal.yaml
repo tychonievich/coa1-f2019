@@ -226,8 +226,10 @@ reading:
         txt: Booleans §3
         lnk: bool.html
     clocks: 
-        txt: Parts §2–3
-        lnk: parts.html
+        - txt: Parts §2–3
+          lnk: parts.html
+        - txt: d flip-flop
+          lnk: //www.falstad.com/circuit/e-edgedff.html
     other hardware: 
         txt: Parts §1–5
         lnk: parts.html
