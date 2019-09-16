@@ -209,6 +209,9 @@ reading:
     hex editor:
         txt: in-lab description
         lnk: lab02-hex-editor.html
+    simulator:
+        txt: in-lab description
+        lnk: lab03-simulator.html
     
     Review:
         txt: topics list
