@@ -318,6 +318,7 @@ assignments:
     PA02:
         title: worksheet
         due: 2019-09-20 13:00:00
+        link: pa02-worksheet.html
         total: 100
         rubric:
             kind: breakdown
