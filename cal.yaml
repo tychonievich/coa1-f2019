@@ -72,14 +72,14 @@ office hours:
           start: 15:30:00
           end: 16:30:00
         - dow: Friday
-          start: 14:00:00
-          end: 15:00:00
+          start: 15:00:00
+          end: 16:00:00
     Jack:
       when:
         - dow: Thursday
           start: 12:30:00
           end: 14:30:00
-        - dow: Saturday
+        - dow: Sunday
           start: 12:00:00
           end: 14:00:00
           except: [2019-09-07]
@@ -91,7 +91,7 @@ office hours:
         - dow: Friday
           start: 14:00:00
           end: 16:00:00
-        - dow: Saturday
+        - dow: Sunday
           start: 12:00:00
           end: 14:00:00      
           except: [2019-09-07]
