@@ -327,70 +327,44 @@ assignments:
             kind: breakdown
             parts:
                 -   name: mux
-                    ratio: 25
-                    rubric:
-                        kind: breakdown
-                        parts:
-                            -   name: basic gates
-                                ratio: 10
-                                rubric: {"kind":"check"}
-                            -   name: wired like mux
-                                ratio: 10
-                                rubric: {"kind":"check"}
-                            -   name: correct use of nots
-                                ratio: 5
-                                rubric: {"kind":"check"}
-                -   name: sets of bits
                     ratio: 50
                     rubric:
                         kind: breakdown
                         parts:
-                            -   name: intersection
-                                ratio: 10
+                            -   name: basic gates
+                                ratio: 20
                                 rubric: {"kind":"check"}
-                            -   name: set minus
-                                ratio: 10
+                            -   name: wired like mux
+                                ratio: 20
                                 rubric: {"kind":"check"}
-                            -   name: union 7
-                                ratio: 10
-                                rubric: {"kind":"check"}
-                            -   name: minus 7
-                                ratio: 10
-                                rubric: {"kind":"check"}
-                            -   name: contains 8
+                            -   name: correct use of nots
                                 ratio: 10
                                 rubric: {"kind":"check"}
                 -   name: shifter
-                    ratio: 25
+                    ratio: 50
                     rubric:
                         kind: breakdown
                         parts:
                             -   name: neat and readable
-                                ratio: 5
+                                ratio: 10
                                 rubric: {"kind":"check"}
                             -   name: shifts right
-                                ratio: 10
+                                ratio: 20
                                 rubric: {"kind":"check"}
                             -   name: sign extends
-                                ratio: 10
+                                ratio: 20
                                 rubric: {"kind":"check"}
     PA03:
-        title: simulator
-        files: ['*.py', '*.java', 'fib.binary']
-        due: 2019-10-01 17:00:00
-        notes: in Java or Python, implement a toy machine language fetch/decode/execute simulator
-        total: 100
-        rubric:
-            kind: breakdown
-            parts:
-                -   name: simulator
-                    ratio: 25
-                    rubric: {"kind": "percentage"}
-                -   name: Fibonacci
-                    ratio: 75
-                    rubric: {"kind": "percentage"}
-
+        title: mult
+        link: pa03-mult.html
+        files: 'mult.binary'
+        due: 2019-09-24 17:00:00
     PA04:
+        title: fib
+        link: pa04-fib.html
+        files: 'fib.binary'
+        due: 2019-10-01 17:00:00
+    PA05:
         title: assembly
         files: 'matlib.s'
         due: 2019-10-15 17:00:00
@@ -430,10 +404,10 @@ assignments:
                     ratio: 10
                     rubric: {"kind":"check"}
 
-    PA05:
+    PA06:
         title: 'bomb'
         due: 2019-10-22 17:00:00
-    PA06:
+    PA07:
         title: smallc
         files: smallfunc.c
         due: 2019-10-29 17:00:00
@@ -456,16 +430,16 @@ assignments:
                     ratio: 20
                     rubric: {"kind":"check"}
 
-    PA07:
+    PA08:
         title: linkedlist
         files: linkedlist.c
         due: 2019-11-12 17:00:00
         rubric: {"kind":"percentage"}
-    PA08:
+    PA09:
         title: postfix
         files: rpn.c
         due: 2019-11-26 17:00:00
-    PA09:
+    PA10:
         title: schat
         files: schat.c
         due: 2019-12-03 17:00:00
