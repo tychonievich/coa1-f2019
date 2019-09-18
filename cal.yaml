@@ -472,6 +472,7 @@ assignments:
                     rubric: {"kind":"check"}
     Quiz00:
         due: 2019-09-02 13:00:00
+        weight: 0
     Quiz01:
         due: 2019-09-09 11:00:00
         open: 2019-09-06 17:00:00
