@@ -324,37 +324,24 @@ assignments:
         link: pa02-worksheet.html
         total: 100
         rubric:
-            kind: breakdown
-            parts:
-                -   name: mux
-                    ratio: 50
-                    rubric:
-                        kind: breakdown
-                        parts:
-                            -   name: basic gates
-                                ratio: 20
-                                rubric: {"kind":"check"}
-                            -   name: wired like mux
-                                ratio: 20
-                                rubric: {"kind":"check"}
-                            -   name: correct use of nots
-                                ratio: 10
-                                rubric: {"kind":"check"}
-                -   name: shifter
-                    ratio: 50
-                    rubric:
-                        kind: breakdown
-                        parts:
-                            -   name: neat and readable
-                                ratio: 10
-                                rubric: {"kind":"check"}
-                            -   name: shifts right
-                                ratio: 20
-                                rubric: {"kind":"check"}
-                            -   name: sign extends
-                                ratio: 20
-                                rubric: {"kind":"check"}
-    PA03:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - name: 'pg1 basic gates (not muxes in answer)'
+                  weight: 1
+                - name: 'pg1 wired like a mux'
+                  weight: 2
+                - name: 'pg1 correct use of nots'
+                  weight: 2
+                - name: 'pg2 neat and readable'
+                  weight: 1
+                - name: 'pg2 shifts right'
+                  weight: 2
+                - name: 'pg2 sign extends'
+                  weight: 2
+
         title: mult
         link: pa03-mult.html
         files: 'mult.binary'
