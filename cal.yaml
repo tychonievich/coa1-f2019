@@ -329,7 +329,7 @@ assignments:
             late-penalty: 1
             auto-late-days: 0
             human:
-                - name: 'pg1 basic gates (not muxes in answer)'
+                - name: 'pg1 basic gates (no muxes in answer)'
                   weight: 1
                 - name: 'pg1 wired like a mux'
                   weight: 2
@@ -341,7 +341,7 @@ assignments:
                   weight: 2
                 - name: 'pg2 sign extends'
                   weight: 2
-
+    PA03:
         title: mult
         link: pa03-mult.html
         files: 'mult.binary'
