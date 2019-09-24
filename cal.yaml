@@ -349,12 +349,12 @@ assignments:
     PA03:
         title: mult
         link: pa03-mult.html
-        files: 'mult.binary'
+        files: 'mult.binary*'
         due: 2019-09-24 17:00:00
     PA04:
         title: fib
         link: pa04-fib.html
-        files: 'fib.binary'
+        files: 'fib.binary*'
         due: 2019-10-01 17:00:00
     PA05:
         title: assembly
