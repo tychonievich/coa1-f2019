@@ -212,6 +212,10 @@ reading:
     simulator:
         txt: in-lab description
         lnk: lab03-simulator.html
+    tools help:
+        txt: in-lab description
+        lnk: lab04-tools.html
+        
     
     Review:
         txt: topics list
