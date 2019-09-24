@@ -2,12 +2,15 @@
 title: Review
 ...
 
+The following are the practice and real exams prepared for last year. While we have explained a few ideas slightly differently than this semester, these should be considered good baselines for what to expect in exams this year.
+
 Semester     Exam   Practice                            Actual                          Key
 ----------- ------- ----------------------------------  -----------------------------   --------------------------------
 Fall 2018     1     [pdf](files/f2018e1practice.pdf)    [pdf](files/f2018e1real.pdf)    [html](files/f2018e1key.html)
 Fall 2018     2     [pdf](files/f2018e2practice.pdf)    [pdf](files/f2018e2real.pdf)    [html](files/f2018e2key.html)
 Fall 2018     3     [pdf](files/f2018e3practice.pdf)    [pdf](files/f2018e3real.pdf)    [html](files/f2018e3key.html)
 
+<!--
 The final exam will be about half material from exams 1 and 2 and about half new material. The practice exam only contains examples of the new material.
 
 The final will include printed-out excerpts from manual pages.
@@ -46,3 +49,4 @@ C
     1. The library functions `puts`, `printf`, `fopen`, `fclose`, and at least one reads-from-`FILE *` function
 
 You are of course also expected to recall all the syntax and semantics details needed to read and write code in both AT&T x86-64 and C.
+-->
