@@ -2,6 +2,9 @@
 title: Review
 ...
 
+
+# Past exams
+
 The following are the practice and real exams prepared for last year. While we have explained a few ideas slightly differently than this semester, these should be considered good baselines for what to expect in exams this year.
 
 Semester     Exam   Practice                            Actual                          Key
@@ -9,6 +12,18 @@ Semester     Exam   Practice                            Actual                  
 Fall 2018     1     [pdf](files/f2018e1practice.pdf)    [pdf](files/f2018e1real.pdf)    [html](files/f2018e1key.html)
 Fall 2018     2     [pdf](files/f2018e2practice.pdf)    [pdf](files/f2018e2real.pdf)    [html](files/f2018e2key.html)
 Fall 2018     3     [pdf](files/f2018e3practice.pdf)    [pdf](files/f2018e3real.pdf)    [html](files/f2018e3key.html)
+
+# TPEGS
+
+We use a system called TPEGS to scan and grade your paper exams. For this to work, you need to fill in a bubble sheet on the first page of your exam. The bubble region looks like this:
+
+![](files/tpegs.png)
+
+You fill in your computing ID, skipping rows if you have less than 6 characters in your id, like this:
+
+![](files/tpegs-examples.png)
+
+The footers are read optically, so please fill in the bubbles darkly (either with ink or dark pencil).
 
 <!--
 The final exam will be about half material from exams 1 and 2 and about half new material. The practice exam only contains examples of the new material.
