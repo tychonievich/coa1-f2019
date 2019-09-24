@@ -4,7 +4,7 @@ title: Tools Help
 
 We were assured the systems would work so that `ssh` to `portal` would solve all our future needs. Reports from early labs suggest that is not the case. Hence, this lab is designed to make sure each of you have an alternative setup you could use.
 
-You are encouraged to do this lab on your own at home, then just quickly check it off with a TA.
+You are encouraged to do this lab on your own at home, then just quickly check it off with a TA. Once you finish, there is no need to remain in lab.
 
 {.exercise ...} To complete this lab, do both of the following:
 
