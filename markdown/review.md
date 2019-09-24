@@ -19,11 +19,12 @@ We use a system called TPEGS (the Tablet Paper Exam Grading System) to scan and 
 
 ![Example TPEGS footer](files/tpegs.png)
 
-You fill in your computing ID, skipping rows if you have less than 6 characters in your id, like this:
+You fill in your computing ID, skipping rows if you have less than 6 characters in your id.
+The footers are read optically, so please fill in the bubbles darkly (either with ink or dark pencil).
+For example the following are correctly bubbled:
 
 ![Example TPEGS footer bubbling](files/tpegs-examples.png)
 
-The footers are read optically, so please fill in the bubbles darkly (either with ink or dark pencil).
 
 <!--
 The final exam will be about half material from exams 1 and 2 and about half new material. The practice exam only contains examples of the new material.
