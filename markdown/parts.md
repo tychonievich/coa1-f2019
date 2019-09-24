@@ -196,13 +196,13 @@ There are two main reasons:
     -   Make the chip smaller.
         Smaller transistors and shorter wires → less distance for charge carriers to travel → faster operation.
         For many years this tactic yielded impressive gains every year,
-        but components less than 50 atoms across^[
+        but components around than 30 atoms across^[
           Chip component sizes are measured in nanometers, not atoms,
           but most of us have no concept of how small a nanometer is.
           The atomic radius of silicon (the principle element in most chips today) is about .11 nm;
           silicon bonds with itself at about 4.3 atoms per nm.
-          Samsung began shipping 10nm-scale chips in 2017.
-        ] entered mass production in 2017;
+          AMD released [7nm-scale chips](https://en.wikipedia.org/wiki/Zen_2) in 2019.
+        ] entered mass production in 2019;
         it is not clear how long this trend can continue.
 
     -   Reduce the work done between each clock cycle.
