@@ -62,16 +62,16 @@ A virtual machine is a program that pretends to be an entire computer, so you ca
 
 1. Download and install VirtualBox from <https://www.virtualbox.org/wiki/Downloads>
 
-2. Download our (1.8 GB) VirtualBox OVA file either from [UVA Box](https://virginia.box.com/s/b1nhtc3z2uuhze5xxjlcjh8gjb9wx6wy) or from [Collab](https://collab.its.virginia.edu/portal/site/376189b0-ab8a-4906-a181-153ed4ffaf4c/tool-reset/1d5fda20-66ed-4735-9df0-9deabca0e541) (we have two copies available, either one is fine)
+2. Download our (1.8 GB) VirtualBox OVA file either from [UVA Box](https://virginia.box.com/s/b1nhtc3z2uuhze5xxjlcjh8gjb9wx6wy) or from [Collab](https://collab.its.virginia.edu/access/content/group/376189b0-ab8a-4906-a181-153ed4ffaf4c/COA_Lubuntu.ova) (we have two copies available, either one is fine)
 
 3. If you are running Windows,
     a. Disable Windows Hyper-V (an alternative virtualization layer which is incompatible with VirtalBox) by running the following from powershell:
         
-        bcdedit /set hypervisorlaunchtype off
+            bcdedit /set hypervisorlaunchtype off
     
     b. You can re-enable Hyper-V by running the following from powershell; note though that VirtualBox requires it to be disabled, so don't do this if you still need VirtalBox:
         
-        bcdedit /set hypervisorlaunchtype on
+            bcdedit /set hypervisorlaunchtype on
 
 4. Run VirtualBox, and within it initialize your virtual machine as follows
     a. In the menu bar, click File → Import Appliance…
