@@ -77,7 +77,7 @@ We'll see other ways of doing this as the semester progresses, but you'll often 
 
 A text editor is a tool designed for editing text, only. They typically provide programming language syntax highlighting (i.e., strings show up in a different color from integers) and sometimes other customizable features, but typically do no have error checking, compiling, executing, and other features of an IDE.
 
-There are three main CLI editors in common use today:
+There are three main CLI editors in common use today; pick **one** to learn. We recommend GNU nano if you want your learning to be over quickly or VI if you want ot have a lot of power after you learn.
 
 EMACS
 :   EMACS was one of the first widely-used powerful CLI editors (released 1976).
