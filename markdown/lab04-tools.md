@@ -68,10 +68,14 @@ A virtual machine is a program that pretends to be an entire computer, so you ca
     a. Disable Windows Hyper-V (an alternative virtualization layer which is incompatible with VirtalBox) by running the following from powershell:
         
             bcdedit /set hypervisorlaunchtype off
+        
+        ... and then restarting your computer
     
     b. You can re-enable Hyper-V by running the following from powershell; note though that VirtualBox requires it to be disabled, so don't do this if you still need VirtalBox:
         
             bcdedit /set hypervisorlaunchtype on
+
+        ... and then restarting your computer
 
 4. Run VirtualBox, and within it initialize your virtual machine as follows
     a. In the menu bar, click File → Import Appliance…
@@ -84,6 +88,7 @@ A virtual machine is a program that pretends to be an entire computer, so you ca
     b. Select "UVA_COA_Lubuntu" on the left panel
     c. Click "Start" 
 
+Note: you may have to enable virtualization in your BIOS to get VirtualBox to work. You likely have this enabled by default; if not, the TAs will help you do so in lab.
 
 # How-to on your own
 
