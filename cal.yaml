@@ -140,10 +140,10 @@ lectures:
     -   moves, memory, ALU ops
     -   fetch-decode-execute
     -   writing machine code
-    -   conditional jump; back doors
+    -   conditional jump
 
-    -   addressing modes; endianness
-    -   adjacency; pointers
+    -   [addressing modes, endianness]
+    -   [adjacency, pointers, back doors]
     -   review 
     
     -   ISA and assembly; patents
@@ -240,9 +240,10 @@ reading:
     other hardware: 
         txt: Parts §1–5
         lnk: parts.html
-    addressing modes; endianness: 
+    addressing modes: 
       - txt: ISA §3.3
         lnk: isa.html
+    endianness:
       - txt: Bits §1–3
         lnk: bits.html
     
