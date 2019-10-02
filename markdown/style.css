@@ -56,6 +56,8 @@ thead > th { font-weight: bold; }
 tr.odd { background-color: rgba(0,0,0,0.04); }
 table { border: 0.0625ex solid rgba(0,0,0,0.125); border-collapse: collapse; max-width: 100%; }
 td,th { padding: 0ex 1ex; }
+table + p, p + table { margin-top: 1ex; }
+
 
 /* Footnote styles */
 
