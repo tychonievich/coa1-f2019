@@ -146,7 +146,7 @@ lectures:
     -   [adjacency, pointers, back doors]
     -   review 
     
-    -   ISA and assembly; patents
+    -   [assembly, x86-64]
     -   x86-64
     -   the stack
     -   tracing variables
