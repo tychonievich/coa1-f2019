@@ -145,6 +145,7 @@ def raw2cal(data, links=None):
                 'to':ent['due'],
                 'slug':task,
             })
+            if 'hide' in ent: ans[-1]['hide'] = end['hide']
             if 'link' in ent: ans[-1]['link'] = ent['link']
         
         # handle office hours
