@@ -131,7 +131,6 @@ def raw2cal(data, links=None):
         # handle assignments
         for task,ent in data['assignments'].items():
             if task[0] == '.': continue
-            if ent.get('hide'): continue
             if 'due' not in ent: continue
             if ent['due'].date() != d: continue
             group = ent.get('group', re.match('^[A-Za-z]*',task).group(0))
@@ -215,6 +214,7 @@ def cal2html(cal):
                 ans.append('<div class="events">')
                 for e in day['events']:
                     if e.get('kind') == 'oh': continue
+                    if e.get('hide'): continue
                     classes = [e[k] for k in ('section','kind','group') if k in e]
                     title = e.get('title','TBA')
                     if type(title) is list: title = ' <small>and</small> '.join(title)
@@ -257,6 +257,7 @@ def cal2fullcal(cal, keep=lambda x:True):
         for day in week:
             if day is not None:
                 for event in day['events']:
+                    if event.get('hide'): continue
                     if keep(event):
                         ans.append({
                             'id':'evt'+str(len(ans)),
