@@ -505,7 +505,7 @@ assignments:
         due: 2019-10-03 18:15:00
         link: review.html
 
-    Exam 1-1:
+    Exam1-1:
         hide: true
         open: 2019-10-02 17:00:00
         due: 2019-10-03 18:15:00
@@ -526,7 +526,7 @@ assignments:
                   weight: 1
                 - name: 'Q4 is A (only)'
                   weight: 2
-    Exam 1-2:
+    Exam1-2:
         hide: true
         open: 2019-10-02 17:00:00
         due: 2019-10-03 18:15:00
@@ -545,7 +545,7 @@ assignments:
                   weight: 1
                 - name: 'Q5 gets all bits right'
                   weight: 1
-    Exam 1-3:
+    Exam1-3:
         hide: true
         open: 2019-10-02 17:00:00
         due: 2019-10-03 18:15:00
@@ -566,7 +566,7 @@ assignments:
                   weight: 2
                 - name: 'Q10 B (half for C)'
                   weight: 2
-    Exam 1-4:
+    Exam1-4:
         hide: true
         open: 2019-10-02 17:00:00
         due: 2019-10-03 18:15:00
@@ -591,7 +591,7 @@ assignments:
                   weight: 1
                 - name: 'Q15 does contain B and not C'
                   weight: 1
-    Exam 1-5:
+    Exam1-5:
         hide: true
         open: 2019-10-02 17:00:00
         due: 2019-10-03 18:15:00
