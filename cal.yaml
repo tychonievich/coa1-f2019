@@ -543,7 +543,7 @@ assignments:
                   weight: 1
                 - name: 'Q5 uses gates to get at least one bit correct'
                   weight: 1
-                - name: 'Q5 gets all bits right'
+                - name: 'Q5 gets at least two bits correct'
                   weight: 1
     Exam1-3:
         hide: true
