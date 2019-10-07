@@ -541,7 +541,7 @@ assignments:
                   weight: 1
                 - name: 'Q5 has a 3-bit output'
                   weight: 1
-                - name: 'Q5 uses gates to get right bottom bit'
+                - name: 'Q5 uses gates to get at least one bit correct'
                   weight: 1
                 - name: 'Q5 gets all bits right'
                   weight: 1
