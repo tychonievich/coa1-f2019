@@ -215,6 +215,9 @@ reading:
     tools help:
         txt: in-lab description
         lnk: lab04-tools.html
+    debugger:
+        txt: in-lab description
+        lnk: lab05-debugger.html
         
     
     Review:
