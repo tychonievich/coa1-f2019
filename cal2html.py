@@ -204,33 +204,7 @@ def raw2cal(data, links=None):
     return ans
 
 def cal2html(cal):
-    """FIXME: grid is better:
-<style>
-    div > div {
-        border: thin solid blue;
-        border-radius: 1ex;
-        padding: 1ex; margin: 1px; 
-        background: rgba(255,255,255,0.75);
-    }
-</style>
-
-<div style="display:grid; background: green;">
-<div style="grid-column:1">16 Sep</div>
-<div style="grid-column:3">18 Sep</div>
-<div style="grid-column:5">20 Sep</div>
-<div style="grid-column:1">23 Sep</div>
-<div style="grid-column:3">25 Sep</div>
-<div style="grid-column:5">27 Sep</div>
-<div style="grid-column:1">30 Sep</div>
-<div style="grid-column:3">2 Oct</div>
-<div style="grid-column:5">4 Oct<br/>The day it all goes down</div>
-<div style="grid-column:3">9 Oct</div>
-<div style="grid-column:5">11 Oct</div>
-<div style="grid-column:1">14 Oct<br>This week I am feeling very verbose, with lots and lots to say</div>
-<div style="grid-column:3">16 Oct<br>This week I am feeling very verbose, with lots and lots to say</div>
-<div style="grid-column:5">18 Oct<br>This week I am feeling very verbose, with lots and lots to say</div>
-</div>
-    """
+    """Uses tables with tr for week and td for day"""
     ans = ['<table id="schedule" class="calendar">']
     for week in cal:
         ans.append('<tr class="week">')
@@ -280,33 +254,7 @@ def cal2html(cal):
 
 
 def cal2html2(cal):
-    """FIXME: grid is better:
-<style>
-    div > div {
-        border: thin solid blue;
-        border-radius: 1ex;
-        padding: 1ex; margin: 1px; 
-        background: rgba(255,255,255,0.75);
-    }
-</style>
-
-<div style="display:grid; background: green;">
-<div style="grid-column:1">16 Sep</div>
-<div style="grid-column:3">18 Sep</div>
-<div style="grid-column:5">20 Sep</div>
-<div style="grid-column:1">23 Sep</div>
-<div style="grid-column:3">25 Sep</div>
-<div style="grid-column:5">27 Sep</div>
-<div style="grid-column:1">30 Sep</div>
-<div style="grid-column:3">2 Oct</div>
-<div style="grid-column:5">4 Oct<br/>The day it all goes down</div>
-<div style="grid-column:3">9 Oct</div>
-<div style="grid-column:5">11 Oct</div>
-<div style="grid-column:1">14 Oct<br>This week I am feeling very verbose, with lots and lots to say</div>
-<div style="grid-column:3">16 Oct<br>This week I am feeling very verbose, with lots and lots to say</div>
-<div style="grid-column:5">18 Oct<br>This week I am feeling very verbose, with lots and lots to say</div>
-</div>
-    """
+    """Uses divs only, with no week-level divs"""
     ans = ['<div id="schedule" class="calendar">']
     for week in cal:
         newweek = True
