@@ -96,7 +96,7 @@ summary { margin-left: -1em; }
 .day.today { box-shadow: 0 0 0.5ex 0.5ex grey; }
 .agenda .day.today .wrapper { margin: 0.5ex 0;}
 
-div.day.empty { background: rgba(0,0,0,0); padding: 0em; margin: 0em; border: none; border-radius: 0; }
+div.day.empty { background: rgba(0,0,0,0); padding: 0em; margin: 0em; border: none; border-radius: 0; min-height: 1.5em; }
 
 </style>
 
