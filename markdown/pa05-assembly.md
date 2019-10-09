@@ -40,25 +40,33 @@ We recommend using `git` to version and test your code.
     a. commit your edits (e.g. `git commit -a -m 'I think I got product working now'`)
     a. push your committed edits (e.g. `git push`)
     a. tell the server to pull, compile, and run with `ssh`
+        
+        You can do this in several steps:
+        
         i. `ssh mst3k@portal.cs.virginia.edu`
-        ii. `cd coa1-code; git pull; clang matlib.s && ./a.out`
-        iii. `exit`
+        i. `module load clang-llvm`
+        i. `cd coa1-code`
+        i. `git pull`
+        i. `clang matlib.s && ./a.out`
+        i. `exit`
+        
+        or using a one-liner to have SSH do it all for you. Note the extra `source` command to tell SSH to know about modules:
+        
+        ````bash
+        ssh mst3k@portal.cs.virginia.edu 'source /etc/profile.d/modules.sh; module load clang-llvm; cd coa1-code; git pul; clang matlbi.s && a.out'
+        ````
 
-<!--
-        - a one-liner for this is `ssh mst3k@portal.cs.virginia.edu 'cd coa1-code; git pull; clang matlib.s && ./a.out'`
-        - remember, up-arrow can re-enter previous commands
     a. You can also put all these commands in a file (`pa06test.sh` on MacOS, `pa06test.ps1` on Windows) and run them at once (using `bash pa06test.sh` on MacOS, `pwsh pa06test.ps1` on Windows)
         
         ````bash
         git commit -a -m 'auto-commit before testing'
         git push
-        ssh mst3k@portal.cs.virginia.edu 'module load llvm-clang; cd coa1-code; git pull; clang matlib.s && ./a.out'
+        ssh mst3k@portal.cs.virginia.edu 'source /etc/profile.d/modules.sh; module load llvm-clang; cd coa1-code; git pull; clang matlib.s && ./a.out'
         ````
--->
 
 This way you'll both (a) have a backup of every version you test, (b) have a copy on the server in case something happens to your laptop, and (c) know you're using the same compiler, processor variant, etc, that we are.
 
-If you get into an infinite loop, Ctrl+C is your friend.
+If you'd rather run locally, you may, but we still encourage frequent `git commit` and `git push` to keep backups of your work.
 
 # Write two functions
 

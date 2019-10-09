@@ -148,8 +148,7 @@ lectures:
     
     -   [assembly, x86-64]
     -   x86-64
-    -   the stack
-    -   tracing variables
+    -   [the stack, tracing variables]
 
     -   compilation
     -   compile-time info
@@ -161,6 +160,7 @@ lectures:
     -   global, stack, heap
     -   malloc and free
     -   malloc examples
+    -   flex day
 
     -   review
     
