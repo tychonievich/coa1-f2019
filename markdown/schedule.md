@@ -47,11 +47,11 @@ It may be adjusted as the semester progresses to reflect actual pacing and uptak
     padding: 0 0.5ex 0 0.5ex;
     margin: 0 -0.5ex 0 -0.5ex;
 }
-.calendar div:first-child {
+.calendar div.day div:first-child {
     padding-top: 0.5ex;
     margin-top: -0.5ex;
 }
-.calendar div:last-child {
+.calendar div.day div:last-child {
     padding-bottom: 0.5ex;
     margin-bottom: -0.5ex;
 }
