@@ -363,6 +363,7 @@ assignments:
     PA05:
         title: assembly
         files: 'matlib.s'
+        link: pa05-assembly.html
         due: 2019-10-15 17:00:00
         rubric:
             kind: breakdown
