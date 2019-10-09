@@ -218,7 +218,9 @@ reading:
     debugger:
         txt: in-lab description
         lnk: lab05-debugger.html
-        
+    bomb:
+        txt: in-lab description
+        lnk: lab06-bomb.html
     
     Review:
         txt: topics list
@@ -403,6 +405,7 @@ assignments:
 
     PA06:
         title: 'bomb'
+        link: pa06-bomb.html
         due: 2019-10-22 17:00:00
     PA07:
         title: smallc
