@@ -356,7 +356,7 @@ assignments:
         title: mult
         link: pa03-mult.html
         files: ['mult.binary', 'mult.binary.txt']
-        due: 2019-09-24 17:00:00
+        due: 2019-10-12 17:00:00
     PA04:
         title: fib
         link: pa04-fib.html
