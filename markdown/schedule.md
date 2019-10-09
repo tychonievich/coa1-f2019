@@ -25,7 +25,6 @@ It may be adjusted as the semester progresses to reflect actual pacing and uptak
 .calendar .day.Sat { grid-column: 7}
 
 .calendar .day { 
-    border: 0.25ex solid rgba(0,0,0,0); 
     background: white;
     border-radius: 1ex;
     padding: .25ex .5ex;
