@@ -74,59 +74,101 @@ def raw2cal(data, links=None):
                     "kind":"special",
                     "day":d
                 })
-        if d < beg: return ans
-        if d > end: return ans
-        
-        # handle sections
-        for sec, ent in data['sections'].items():
-            if d.weekday() not in ent['days']: continue
-            if isexam and any((
-                data['meta'].get('lecture exam') == (ent['type'] == 'lecture'),
-                ent.get('exams')
-            )):
-                ans.append({
-                    'section':sec,
-                    'title':'Exam',
-                    "kind":'exam',
-                    "from":dt + timedelta(0,ent['start']),
-                    "to":dt + timedelta(0,ent['start'] + 60*ent['duration']),
-                    "where":ent['room']
-                })
-            elif ent['type']+'s' not in data or len(data[ent['type']+'s']) <= ent['sidx']:
-                ans.append({
-                    'section':sec,
-                    'title':ent['type'],
-                    "kind":ent['type'],
-                    "from":dt + timedelta(0,ent['start']),
-                    "to":dt + timedelta(0,ent['start'] + 60*ent['duration']),
-                    "where":ent['room']
-                })
-            else:
-                ans.append({
-                    'section':sec,
-                    'title':data[ent['type']+'s'][ent['sidx']] or '',
-                    "kind":ent['type'],
-                    "from":dt + timedelta(0,ent['start']),
-                    "to":dt + timedelta(0,ent['start'] + 60*ent['duration']),
-                    "where":ent['room']
-                })
-                for subtitle in (ans[-1]['title'] if type(ans[-1]['title']) is list else [ans[-1]['title']]):
-                    if subtitle in data['reading']:
-                        tmp = data['reading'][subtitle]
-                        if type(tmp) is not list: tmp = [tmp]
-                        if 'reading' in ans[-1]:
-                            ans[-1]['reading'].extend(tmp)
-                        else:
-                            ans[-1]['reading'] = tmp
-                ent['sidx'] += 1
-            # handle separate links file
-            if links and d in links and ent['type'] == 'lecture':
-                for f in links[d].get('files',[]):
-                    n = os.path.basename(f)
-                    n = n[n.find('-')+1:]
-                    ans[-1].setdefault('reading',[]).append({'txt':n,'lnk':f})
-                if 'video' in links[d]: ans[-1]['video'] = links[d]['video']
-                if 'audio' in links[d]: ans[-1]['audio'] = links[d]['audio']
+        if d >= beg and d <= end:
+            
+            # handle sections
+            for sec, ent in data['sections'].items():
+                if d.weekday() not in ent['days']: continue
+                if isexam and any((
+                    data['meta'].get('lecture exam') == (ent['type'] == 'lecture'),
+                    ent.get('exams')
+                )):
+                    ans.append({
+                        'section':sec,
+                        'title':'Exam',
+                        "kind":'exam',
+                        "from":dt + timedelta(0,ent['start']),
+                        "to":dt + timedelta(0,ent['start'] + 60*ent['duration']),
+                        "where":ent['room']
+                    })
+                elif ent['type']+'s' not in data or len(data[ent['type']+'s']) <= ent['sidx']:
+                    ans.append({
+                        'section':sec,
+                        'title':ent['type'],
+                        "kind":ent['type'],
+                        "from":dt + timedelta(0,ent['start']),
+                        "to":dt + timedelta(0,ent['start'] + 60*ent['duration']),
+                        "where":ent['room']
+                    })
+                else:
+                    ans.append({
+                        'section':sec,
+                        'title':data[ent['type']+'s'][ent['sidx']] or '',
+                        "kind":ent['type'],
+                        "from":dt + timedelta(0,ent['start']),
+                        "to":dt + timedelta(0,ent['start'] + 60*ent['duration']),
+                        "where":ent['room']
+                    })
+                    for subtitle in (ans[-1]['title'] if type(ans[-1]['title']) is list else [ans[-1]['title']]):
+                        if subtitle in data['reading']:
+                            tmp = data['reading'][subtitle]
+                            if type(tmp) is not list: tmp = [tmp]
+                            if 'reading' in ans[-1]:
+                                ans[-1]['reading'].extend(tmp)
+                            else:
+                                ans[-1]['reading'] = tmp
+                    ent['sidx'] += 1
+                # handle separate links file
+                if links and d in links and ent['type'] == 'lecture':
+                    for f in links[d].get('files',[]):
+                        n = os.path.basename(f)
+                        n = n[n.find('-')+1:]
+                        ans[-1].setdefault('reading',[]).append({'txt':n,'lnk':f})
+                    if 'video' in links[d]: ans[-1]['video'] = links[d]['video']
+                    if 'audio' in links[d]: ans[-1]['audio'] = links[d]['audio']
+
+            # handle office hours
+            if data.get('office hours',{}).get('.begin', d) <= d:
+                ## find
+                oh = {}
+                for kind,meta in data.get('office hours',{}).items():
+                    if kind[0] == '.': continue
+                    for staff,det in meta.items():
+                        if staff == 'where': continue
+                        for ent in det['when']:
+                            if ((('dow' in ent and d.weekday() == dow(ent['dow']))
+                                    or ('date' in ent and d == ent['date']))
+                                and d not in ent.get('except',[])
+                            ):
+                                if 'where' in det:
+                                    oh.setdefault(staff+' OH ('+det['where']+')',{
+                                        'where':det['where'],
+                                        'when':[]
+                                    })['when'].append((ent['start'],ent['end']))
+                                else:
+                                    oh.setdefault(kind+' OH ('+meta['where']+')',{
+                                        'where':meta['where'],
+                                        'when':[]
+                                    })['when'].append((ent['start'],ent['end']))
+                ## combine
+                for k in oh:
+                    oh[k]['when'].sort()
+                    tmp = [oh[k]['when'][0]]
+                    for s,e in oh[k]['when'][1:]:
+                        if s <= tmp[-1][1]: tmp[-1] = (tmp[-1][0], e)
+                        else: tmp.append((s,e))
+                    oh[k]['when'] = tmp
+                ## add to events
+                for k in oh:
+                    for s,e in oh[k]['when']:
+                        ans.append({
+                            'title':k[:k.find(' (')] if ' (' in k else k,
+                            'kind':'oh',
+                            'from':dt + timedelta(0,s),
+                            'to':dt + timedelta(0,e),
+                            'where':oh[k]['where'],
+                        })
+            
 
         # handle assignments
         for task,ent in data['assignments'].items():
@@ -147,48 +189,6 @@ def raw2cal(data, links=None):
             })
             if 'hide' in ent: ans[-1]['hide'] = ent['hide']
             if 'link' in ent: ans[-1]['link'] = ent['link']
-        
-        # handle office hours
-        if data.get('office hours',{}).get('.begin', d) <= d:
-            ## find
-            oh = {}
-            for kind,meta in data.get('office hours',{}).items():
-                if kind[0] == '.': continue
-                for staff,det in meta.items():
-                    if staff == 'where': continue
-                    for ent in det['when']:
-                        if ((('dow' in ent and d.weekday() == dow(ent['dow']))
-                                or ('date' in ent and d == ent['date']))
-                            and d not in ent.get('except',[])
-                        ):
-                            if 'where' in det:
-                                oh.setdefault(staff+' OH ('+det['where']+')',{
-                                    'where':det['where'],
-                                    'when':[]
-                                })['when'].append((ent['start'],ent['end']))
-                            else:
-                                oh.setdefault(kind+' OH ('+meta['where']+')',{
-                                    'where':meta['where'],
-                                    'when':[]
-                                })['when'].append((ent['start'],ent['end']))
-            ## combine
-            for k in oh:
-                oh[k]['when'].sort()
-                tmp = [oh[k]['when'][0]]
-                for s,e in oh[k]['when'][1:]:
-                    if s <= tmp[-1][1]: tmp[-1] = (tmp[-1][0], e)
-                    else: tmp.append((s,e))
-                oh[k]['when'] = tmp
-            ## add to events
-            for k in oh:
-                for s,e in oh[k]['when']:
-                    ans.append({
-                        'title':k[:k.find(' (')] if ' (' in k else k,
-                        'kind':'oh',
-                        'from':dt + timedelta(0,s),
-                        'to':dt + timedelta(0,e),
-                        'where':oh[k]['where'],
-                    })
         
         return ans
 
