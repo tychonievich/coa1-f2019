@@ -511,6 +511,64 @@ assignments:
         open: 2019-10-02 17:00:00
         due: 2019-10-03 18:15:00
         link: review.html
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - name: 'Q1 is 61'
+                  weight: 2
+                - name: 'Q2 is 0xca3e'
+                  weight: 2
+                - name: 'Q3 sum is 01100010'
+                  weight: 1
+                - name: 'Q3 sum shows work, no 9th bit'
+                  weight: 1
+                - name: 'Q4 is A (only)'
+                  weight: 2
+                - name: 'Q5 has 4 1-bit inputs'
+                  weight: 1
+                - name: 'Q5 has a 3-bit output'
+                  weight: 1
+                - name: 'Q5 uses gates to get at least one bit correct'
+                  weight: 1
+                - name: 'Q5 gets at least two bits correct'
+                  weight: 1
+                - name: 'Q6 is A (half for B)'
+                  weight: 2
+                - name: 'Q7 is same'
+                  weight: 2
+                - name: 'Q8 is same'
+                  weight: 2
+                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
+                  weight: 2
+                - name: 'Q10 B (half for C)'
+                  weight: 2
+                - name: 'Q11 is 1'
+                  weight: 2
+                - name: 'Q12 is same number of bytes as their answer to Q11'
+                  weight: 1
+                - name: 'Q12 is B6'
+                  weight: 1
+                - name: 'Q13 is 0x31 (half for 0xab)'
+                  weight: 2
+                - name: 'Q14 is 0x07 (half for 0x01 or 0x76)'
+                  weight: 1
+                - name: 'Q15 does not contain E'
+                  weight: 1
+                - name: 'Q15 does contain B and not C'
+                  weight: 1
+                - name: 'Q16 pro-patent is an argument for patents'
+                  weight: 0.5
+                - name: 'Q16 pro-patent is applicable to ISAs'
+                  weight: 0.5
+                - name: 'Q16 anti-patent is an argument against patents'
+                  weight: 0.5
+                - name: 'Q16 anti-patent is applicable to ISAs'
+                  weight: 0.5
+                - name: 'pledge signed'
+                  weight: 1
 
     Exam1-1:
         hide: true
