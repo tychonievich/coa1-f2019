@@ -34,20 +34,27 @@ if on Windows, you also have to use `\` instead of `/`:
 
 ```bash
 ssh-keygen -f ~/.ssh/id_rsa -t rsa -b 2048
+```
+
+When prompted for a passphrase, just press enter.[^error]
+
+```
 ssh-copy-id -i ~/.ssh/id_rsa.pub username@the.server.edu
 ```
 
-There is a slight chance that `~/.ssh` will not already exist. In that case `ssh-keygen` will fail; if you see such a failure you can fix it by running 
+When prompted for a passphrase, use your UVA CS account password.
 
-```bash
-mkdir ~/.ssh
-chmod 700 ~/.ssh
-```
 
-and then re-run the above commands
+[^error]:
+    There is a slight chance that `~/.ssh` will not already exist. In that case `ssh-keygen` will fail; if you see such a failure you can fix it by running 
 
-It should be safe to accept the defaults on each prompt except the password prompts.
-Note the password prompts will accept what you type but not display it.
+    ````bash
+    mkdir ~/.ssh
+    chmod 700 ~/.ssh
+    ````
+
+    and then re-run the above commands
+
 
 ### Multiple machines
 
