@@ -29,23 +29,24 @@ When you log in, the remote computer will do half the work with its file, then s
 ## Setup
 
 The following commands should work on any system with SSH installed,
-with appropriate changes to `username@the.server.edu`;
-if on Windows, you also have to use `\` instead of `/`:
+with appropriate changes to `username@the.server.edu`;[^error]
 
 ```bash
 ssh-keygen -f ~/.ssh/id_rsa -t rsa -b 2048
 ```
 
-When prompted for a passphrase, just press enter.[^error]
+When prompted for a passphrase by `ssh-keygen`, just press enter without typing anything.
 
 ```
 ssh-copy-id -i ~/.ssh/id_rsa.pub username@the.server.edu
 ```
 
-When prompted for a passphrase, use your UVA CS account password.
+When prompted for a passphrase by `ssh-copy-id`, use your UVA CS account password.
 
 
 [^error]:
+    If on Windows, you also may need to use `\` instead of `/` (whether you do or not depends on which command line tool you use).
+    
     There is a slight chance that `~/.ssh` will not already exist. In that case `ssh-keygen` will fail; if you see such a failure you can fix it by running 
 
     ````bash
