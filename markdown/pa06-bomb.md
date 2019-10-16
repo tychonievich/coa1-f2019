@@ -19,9 +19,7 @@ Grade       Criteria
 80%         2 phases defused
 95%         3 phases defused
 98%         4 phases defused
-99%         5 phases defused
-100%        6 phases defused
-+1%         each additional phase defused
++1%         each additional phase defused (including extra credit if you get more than 6 phases)
 
 If you have more than 20 explosions, we will remove points.
 
