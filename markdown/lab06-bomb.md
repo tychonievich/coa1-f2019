@@ -29,7 +29,7 @@ Each time your bomb explodes it notifies the bomblab server. If we're notified o
 
 # How to proceed
 
-1. On a Linux machine, download[^curl] a [binary bomb](http://hazel.cs.virginia.edu:15213/)^[If that site is down, try the backup server: <http://hazel.cs.virginia.edu:15213/> (and <http://hazel.cs.virginia.edu:15213/scoreboard>]
+1. On a Linux machine, download[^curl] a [binary bomb](http://hazel.cs.virginia.edu:15213/)
     - for credit, you must use your lower-case computing ID
 2. Extract the bomb using `tar -xvf bomb#.tar`{.bash} where `#` is your bomb number.
 3. `cd bomb#` (again, where `#` is your bomb number).
