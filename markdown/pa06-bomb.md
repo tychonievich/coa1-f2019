@@ -12,6 +12,8 @@ You may discuss *strategies* and *code patterns*, but not specifics.
 
 You'll use the same bomb you did for [the lab](lab06-bomb.html). If you worked with someone else in lab, you can download your own bomb using the same bomb download site.
 
+> Due to changes needed to fix several errors with the bomb server, bombs downloaded before Wednesday, 16 October 2019 at 6:00pm will not be graded. Please download a new bomb if yours is older than that.
+
 Credit will be awarded as follows:
 
 Grade       Criteria
@@ -23,4 +25,4 @@ Grade       Criteria
 
 If you have more than 20 explosions, we will remove points.
 
-There is no submission needed besides running the bomb and typing the correct inputs, which will update [the scoreboard](http://kytos.cs.virginia.edu:12506/scoreboard)^[If you downloaded from the backup site, use  the backup server: <http://hazel.cs.virginia.edu:12506/>] which will be used to populate the gradebook after the PA closes.
+There is no submission needed besides running the bomb and typing the correct inputs, which will update [the scoreboard](http://kytos.cs.virginia.edu:15215/scoreboard) which will be used to populate the gradebook after the PA closes.

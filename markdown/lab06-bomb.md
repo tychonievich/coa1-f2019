@@ -29,19 +29,22 @@ Each time your bomb explodes it notifies the bomblab server. If we're notified o
 
 # How to proceed
 
-1. On a Linux machine, download[^curl] a [binary bomb](http://hazel.cs.virginia.edu:15213/)
+1. On a Linux machine, download[^curl] a [binary bomb](http://kytos.cs.virginia.edu:15215/)
     - for credit, you must use your lower-case computing ID
+
+    > Due to changes needed to fix several errors with the bomb server, bombs downloaded before Wednesday, 16 October 2019 at 6:00pm will not be graded. Please download a new bomb if yours is older than that.
+
 2. Extract the bomb using `tar -xvf bomb#.tar`{.bash} where `#` is your bomb number.
 3. `cd bomb#` (again, where `#` is your bomb number).
 4. Read the `README`
 5. You are welcome to look at `bomb.c` -- it isn't very interesting, though
 6. Do whatever you need to to understand what the bomb is doing
 7. Only run the bomb `./bomb` once you are confident you can defuse a phase (or at least avoid an explosion)
-8. Once you pass a phase visit [the scoreboard](http://hazel.cs.virginia.edu:15213/scoreboard) to verify that we saw your success.
+8. Once you pass a phase visit [the scoreboard](http://kytos.cs.virginia.edu:15215/scoreboard) to verify that we saw your success.
 
 [^curl]: If you want, you can download on portal with the following two lines:
     ````bash
-    curl "http://hazel.cs.virginia.edu:15213/?username=$USER&usermail=$USER@virginia.edu&submit=Submit" > bomb.tar
+    curl "http://kytos.cs.virginia.edu:15215/?username=$USER&usermail=$USER@virginia.edu&submit=Submit" > bomb.tar
     tar xvf bomb.tar
     ````
 
