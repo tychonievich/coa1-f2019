@@ -23,4 +23,4 @@ Grade       Criteria
 
 If you have more than 20 explosions, we will remove points.
 
-There is no submission needed besides running the bomb and typing the correct inputs, which will update [the scoreboard](http://kytos.cs.virginia.edu:12506/scoreboard) which will be used to populate the gradebook after the PA closes.
+There is no submission needed besides running the bomb and typing the correct inputs, which will update [the scoreboard](http://kytos.cs.virginia.edu:12506/scoreboard)^[If you downloaded from the backup site, use  the backup server: <http://hazel.cs.virginia.edu:12506/>] which will be used to populate the gradebook after the PA closes.
