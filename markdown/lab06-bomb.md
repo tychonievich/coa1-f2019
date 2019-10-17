@@ -45,6 +45,8 @@ Each time your bomb explodes it notifies the bomblab server. If we're notified o
 [^curl]: If you want, you can download on portal with the following two lines:
     ````bash
     curl "http://kytos.cs.virginia.edu:15215/?username=$USER&usermail=$USER@virginia.edu&submit=Submit" > bomb.tar
+    ````
+    ````bash
     tar xvf bomb.tar
     ````
 
