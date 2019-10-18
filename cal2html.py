@@ -116,7 +116,7 @@ def raw2cal(data, links=None):
                             if 'reading' in ans[-1]:
                                 ans[-1]['reading'].extend(tmp)
                             else:
-                                ans[-1]['reading'] = tmp
+                                ans[-1]['reading'] = tmp[:]
                     ent['sidx'] += 1
                 # handle separate links file
                 if links and d in links and ent['type'] == 'lecture':
