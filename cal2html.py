@@ -388,6 +388,7 @@ END:VEVENT'''.format(
         for day in week:
             if day:
                 for event in day['events']:
+                    if event.get('hide'): continue
                     if 'section' in event and sections and event['section'] not in sections: continue
                     ans.append(encode(event))
     ans.append('END:VCALENDAR\r\n')
