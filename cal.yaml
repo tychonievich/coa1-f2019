@@ -221,6 +221,9 @@ reading:
     bomb:
         txt: in-lab description
         lnk: lab06-bomb.html
+    'char*':
+        txt: in-lab description
+        lnk: lab07-char*.html
     
     Review:
         txt: topics list
