@@ -416,6 +416,7 @@ assignments:
     PA07:
         title: smallc
         files: smallfunc.c
+        link: pa07-smallc.html
         due: 2019-10-29 17:00:00
         rubric:
             kind: breakdown
