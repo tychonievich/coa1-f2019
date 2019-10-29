@@ -226,7 +226,7 @@ reading:
         lnk: lab07-char*.html
     'fchat':
         txt: in-lab description
-        lnk: lab07-fchat.html
+        lnk: lab08-fchat.html
     
     Review:
         txt: topics list
