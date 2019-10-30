@@ -298,8 +298,8 @@ and the next 8 could be anything.
 ## Garbage collectors
 
 Many languages do not have an equivalent to `free`.
-They let you allocate memory, and then ever deallocate it.
-They do this by adding to your program a *garbage collector*.
+They let you allocate memory, but never ask you to deallocate it.
+They avoid (most) memory leaks by adding to your program a *garbage collector*.
 
 Technical definitions of **garbage** vary a bit in detail;
 it is always memory allocated on the heap,
