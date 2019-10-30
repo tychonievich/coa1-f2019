@@ -238,15 +238,16 @@ larray *make_array() {
     return ans;
 }
 ````
-
-In general, if you find yourself `malloc`ing *without* a `sizeof` inside, you did something wrong.
 {/}
+
+
+With very rare exceptions, we malloc to store one or more values of a given size inside the malloced memory; if you find yourself `malloc`ing *without* a `sizeof` inside, you almost certainly did something wrong.
 
 ### `free`
 
-The library function `void free(void *);` accepts a pointer returned by `malloc` and marks it as no longer in use and available for future `malloc`s.
+The library function `void free(void *);` accepts a pointer returned by `malloc` and marks it as no longer in use, and hence as available for future `malloc`s.
 
-In small, short-running programs you can often get away with never `free`ing your data structures,
+In small, short-running programs you may be able to get away with never `free`ing your data structures,
 but in larger and longer-running programs this can cause a program to hog all available memory on the computer, slowing all operations and possibly even crashing the program or entire computer.
 Programs that allocate memory and then forget about it without `free`ing it are said to have a [Memory leak]
 
