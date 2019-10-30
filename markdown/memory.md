@@ -314,6 +314,29 @@ A block of memory returned by a single call to `malloc` or its friends is **reac
 
 All *unreachable* memory is *garbage*, but not all *garbage* is *unreachable*.
 
+{.example ...}
+Consider the following code:
+
+```c
+int bad(int a) {
+    int *list = malloc(a, sizeof(int));
+    for(int i=0; i<a; i+=1) list[i] = (i+1*(i+1);
+    int sum = 0;
+    for(int i=0; i<a; i+=1) sum += list[i];
+    // midpoint
+    int ans = 0;
+    while (sum > 0) {
+        ans += 1;
+        ans >>= 1;
+    }
+    return ans;
+}
+```
+
+The memory returned by `malloc` becomes garbage at the comment `// midpoint`{.c} because it is never used after that;
+it becomes unreachable after the function returns (and hence is a [memory leak](#memory-leak)).
+{/}
+
 ### Garbage detection
 
 There are several well-known, well-studied, and carefully-implemented algorithms for performing garbage detection; almost all of these detect only unreachable garbage.
