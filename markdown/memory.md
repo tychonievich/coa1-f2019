@@ -272,7 +272,7 @@ the value of `a` may be anything, while `b` is guaranteed to be `0`.
 {/}
 
 
-`x = realloc(x, s);` *either* 
+`x = realloc(x, s);`
 
 - *either* extends the previously-allocated region pointed to by `x` to be `s` bytes long,
 - *or* 
