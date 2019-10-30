@@ -335,6 +335,8 @@ int bad(int a) {
 
 The memory returned by `malloc` becomes garbage at the comment `// midpoint`{.c} because it is never used after that;
 it becomes unreachable after the function returns (and hence is a [memory leak](#memory-leak)).
+
+It's not related to memory, but what mathematical function does `bad(n)` compute?^[Answer: `floor(log2((n)*(n+1)/2))+1`]
 {/}
 
 ### Garbage detection
