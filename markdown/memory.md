@@ -303,7 +303,7 @@ They avoid (most) memory leaks by adding to your program a *garbage collector*.
 
 ### Garbage
 
-Memory is **garbage** if it is (a) allocated on the heap and (b) will never be used by your program again.
+Memory is **garbage** if it is (a) allocated on the heap and (b) will never be used in the future.
 
 Memory is **unreachable** if it is (a) allocated on the heap and (b) it is not part of a *reachable* allocated memory block.
 A block of memory returned by a single call to `malloc` or its friends is **reachable** if any of the following are true:
@@ -313,6 +313,9 @@ A block of memory returned by a single call to `malloc` or its friends is **reac
 - its address is in a reachable block of memory
 
 All *unreachable* memory is *garbage*, but not all *garbage* is *unreachable*.
+Some sources call unreachable memory "syntactic garbage"
+and the more general category of garbage "semantic garbage";
+confusingly, it is also not hard to find sources that use the word "garbage" to mean "unreachable" and ignore the existence of other kinds of garbage.
 
 {.example ...}
 Consider the following code:
