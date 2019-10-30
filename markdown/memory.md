@@ -301,26 +301,30 @@ Many languages do not have an equivalent to `free`.
 They let you allocate memory, but never ask you to deallocate it.
 They avoid (most) memory leaks by adding to your program a *garbage collector*.
 
-Technical definitions of **garbage** vary a bit in detail;
-it is always memory allocated on the heap,
-and is conceptually memory allocated on the heap that will not be used by the program again.
-One way of defining this is that garbage is heap memory that is *not* pointed to by
+### Garbage
 
-- a program register, or
-- a pointer on the stack, or
-- a pointer in part of the the heap that is not garbage
+Memory is **garbage** if it is (a) allocated on the heap and (b) will never be used by your program again.
 
-There are several well-known, well-studied, and carefully-implemented algorithms for performing garbage detection.
-However, that is only half of the problem.
+Memory is **unreachable** if it is (a) allocated on the heap and (b) it is not part of a *reachable* allocated memory block.
+A block of memory returned by a single call to `malloc` or its friends is **reachable** if any of the following are true:
 
-A **garbage collector** is a process that 
+- its address is in a program register, or
+- its address is on the stack, or
+- its address is in a reachable block of memory
 
-- inspects the entire contents of a program's memory
-- detects what garbage is on the hap
-- `free`s that garbage
+All *unreachable* memory is *garbage*, but not all *garbage* is *unreachable*.
 
-Typically, this requires both (a) significant bookkeeping data structures
-and (b) periodically pausing the entire program to perform a garbage detection hunt.
+### Garbage detection
+
+There are several well-known, well-studied, and carefully-implemented algorithms for performing garbage detection; almost all of these detect only unreachable garbage.
+A garbage **garbage collector** is a process that detects garbage and then frees it; the most common model (technically a "tracing garbage collector") works as follows:
+
+- inspect the entire contents of a program's memory
+- flag as garbage all unreachable memory on the heap
+- `free` that garbage
+
+Thee steps require significant bookkeeping data structures and processing power,
+and (b) periodically pausing the entire program to perform a garbage detection hunt^[There are garbage collectors that run *while* the rest of the program is modifying memory, but doing so has various challenges that make them more complicated and have various possible drawbacks. See <https://en.wikipedia.org/wiki/Tracing_garbage_collection#Stop-the-world_vs._incremental_vs._concurrent> for more.].
 In general, this can slow down a program, and increase the memory is uses,
 and cause it to pause at awkward times.
 As garbage collectors become more sophisticated and computer memory becomes cheaper,
