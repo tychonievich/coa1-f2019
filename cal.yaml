@@ -691,8 +691,22 @@ assignments:
         link: exam-wrapper.html
         files: exam1wrapper.txt
         weight: 0.2
-        
-
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+              - "attempted a wrapper"
+              - "has reflection on study"
+              - "reflection is insightful"
+              - "has corrected answers"
+              - "all wrong answers corrected"
+              - "corrected answer have explanations"
+              - "some explanations are insightful"
+              - "all explanations are correct"
+              - "has plans for future"
+              - "plans seem likely to improve learning"
     Exam 2:
         open: 2019-11-06 17:00:00
         due: 2019-11-07 18:15:00
