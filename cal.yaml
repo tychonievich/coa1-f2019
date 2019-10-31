@@ -548,7 +548,7 @@ assignments:
                   weight: 2
                 - name: 'Q8 is same'
                   weight: 2
-                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
+                - name: 'Q9 is "0x_??????? where _ is neither 0 nor F'
                   weight: 2
                 - name: 'Q10 B (half for C)'
                   weight: 2
