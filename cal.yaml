@@ -436,6 +436,7 @@ assignments:
     PA08:
         title: linkedlist
         files: linkedlist.c
+        link: pa08-linkedlist.html
         due: 2019-11-12 17:00:00
         rubric: {"kind":"percentage"}
     PA09:
