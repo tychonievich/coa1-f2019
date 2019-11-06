@@ -116,7 +116,7 @@ many functions in the C standard library use the following conventions.
 ## Results in parameters
 
 If a function should return more than a single primitive value,
-many functions will instead *return* and error-checking integer (see [Reporting errors])
+many functions will instead *return* an error-checking integer (see [Reporting errors])
 and use a pointer-type argument to provide the "returned" value.
 Some will mix and match, both returning and using a pointer parameter to provide information.
 
