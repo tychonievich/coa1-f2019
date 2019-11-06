@@ -172,7 +172,8 @@ if (error != 0) {
     else if (error == ERNAGE)
         printf("...because \"%s\" is too big to represent\n", argv[1]);
     else
-        printf("...because of an unexpected error (number %d) processing \"%s\"\n", error, argv[1]);
+        printf("...because of an unexpected error" 
+               "(number %d) processing \"%s\"\n", error, argv[1]);
 } else { 
     // ...
 }
