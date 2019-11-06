@@ -38,7 +38,7 @@ Moving
 Searching
 :   If you type `/`, you enter search mode.
     You can then type a regular expression to look for.
-    Enter locks in the regular expression as the current search pattern and finds the first one one or below the current screen.
+    Enter locks in the regular expression as the current search pattern and finds the first one on or below the current screen.
     `n` then goes to the next match, repeated until the end of the file is reached.
     `N` searches above the current screen instead.
 
