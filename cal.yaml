@@ -442,6 +442,7 @@ assignments:
     PA09:
         title: postfix
         files: rpn.c
+        link: pa09-postfix.html
         due: 2019-11-26 17:00:00
     PA10:
         title: schat
