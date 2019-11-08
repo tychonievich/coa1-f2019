@@ -2,6 +2,27 @@
 title: Computer Organization and Architecture 1
 ...
 
+# Writeups
+
+The following are the main writeups created for this course:
+
+- [Boolean Algebra and Gates](bool.html) including bit-fiddling
+- [Bits and Beyond](bits.html) including number representations and a little information theory
+- [Components of digital computers](parts.html), including voltage, registers, and HDLs
+- [Designing a processor](isa.html), including von Neumann architecture, ISAs, condition codes, and RISC/CISC
+- [x86-64 Summary](x86.html), including calling conventions
+- [C, a guide and reference](c.html), including the C preprocessor
+- [An overview of memory](memory.html), including garbage detection and common memory errors
+- [C standard library manual pages](manpage.html), including a guide to using the `man` command
+- [C++ Inheritance](vtable.html), including how vtables enable virtual functions
+
+The following are additional references:
+
+- [Using SSH](help-ssh.html), including how to set up passwordless authentication
+- [Command-fu](command-fu.html), a few simple command-line examples (unfinished)
+- [Debugger example](cmdadd.html), using `lldb` and `ghex`
+- [Tips for Linux on your own computer](linux.html), including how to connect to UVA's instantiation of eduroam and handling digital certificates.
+
 # Overview 
 
 This is part of a pilot of a new set of CS courses.
