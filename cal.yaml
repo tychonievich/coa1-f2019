@@ -708,6 +708,103 @@ assignments:
         due: 2019-11-07 18:15:00
         link: review.html
 
+    E2-1:
+        open: 2019-11-06 17:00:00
+        due: 2019-11-07 18:15:00
+        hide: true
+        weight: 4
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - Q1 correct
+                - Q2 correct
+    E2-2:
+        open: 2019-11-06 17:00:00
+        due: 2019-11-07 18:15:00
+        hide: true
+        weight: 8
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - Q3 correct
+                - Q4 correct
+                - Q5 correct
+                - Q6 correct
+    E2-3:
+        open: 2019-11-06 17:00:00
+        due: 2019-11-07 18:15:00
+        hide: true
+        weight: 8
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - Q7 correct
+                - Q8 correct
+                - Q9 correct
+                - Q10 correct
+    E2-4:
+        open: 2019-11-06 17:00:00
+        due: 2019-11-07 18:15:00
+        hide: true
+        weight: 10
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - Q11 correct
+                - Q12 correct
+                - {name: Q13 blank 1 correct, weight: 0.5}
+                - {name: Q13 blank 2 correct, weight: 0.5}
+                - {name: Q13 blank 3 correct, weight: 0.5}
+                - {name: Q13 blank 4 correct, weight: 0.5}
+                - {name: Q13 blank 5 correct, weight: 0.5}
+                - {name: Q13 blank 6 correct, weight: 0.5}
+    E2-5:
+        open: 2019-11-06 17:00:00
+        due: 2019-11-07 18:15:00
+        hide: true
+        weight: 8
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - Q14 follows limitations given
+                - Q14 loop with gotos
+                - Q14 else without "else"
+                - Q14 nothing else wrong
+    E2-6:
+        open: 2019-11-06 17:00:00
+        due: 2019-11-07 18:15:00
+        hide: true
+        weight: 9
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - {name: Q15 commented right frees, weight: 0.5}
+                - {name: Q15 left other frees uncommented, weight: 0.5}
+                - Q16 correct
+                - Q17 correct
+                - Q18 correct
+                - {name: pledged, weight: 0.5}
+                
+                
+
     Exam 2-wrapper:
         open: 2019-11-15 17:00:00
         due: 2019-11-22 17:00:00
