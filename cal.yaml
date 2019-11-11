@@ -223,6 +223,9 @@ reading:
     'fchat':
         txt: in-lab description
         lnk: lab08-fchat.html
+    'sockets':
+        txt: in-lab description
+        lnk: lab09-sockets.html
     
     Review:
         txt: topics list
