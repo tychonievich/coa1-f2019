@@ -370,41 +370,22 @@ assignments:
         link: pa05-assembly.html
         due: 2019-10-15 17:00:00
         rubric:
-            kind: breakdown
-            parts:
-                -   name: code assembles, runs, and terminates
-                    ratio: 10
-                    rubric: {"kind":"check"}
-
-                -   name: product assembly is a good effort
-                    ratio: 10
-                    rubric: {"kind":"check"}
-                -   name: product has right answer
-                    ratio: 10
-                    rubric: {"kind":"check"}
-                -   name: product is iterative
-                    ratio: 10
-                    rubric: {"kind":"check"}
-                -   name: product does not use multiply instructions
-                    ratio: 10
-                    rubric: {"kind":"check"}
-                    
-                -   name: power assembly is a good effort
-                    ratio: 10
-                    rubric: {"kind":"check"}
-                -   name: power has right answer
-                    ratio: 10
-                    rubric: {"kind":"check"}
-                -   name: power is recursive
-                    ratio: 10
-                    rubric: {"kind":"check"}
-                -   name: power does not use multiply instructions or foreign functions
-                    ratio: 10
-                    rubric: {"kind":"check"}
-                -   name: power invokes product
-                    ratio: 10
-                    rubric: {"kind":"check"}
-
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            huamn:
+                - 'submitted'
+                - 'assembles'
+                - 'runs'
+                - 'product should not use imul'
+                - 'product is iterative'
+                - 'product does not call functions'
+                - {name: 'product works', weight: 3}
+                - 'power should not use imul'
+                - 'power is recursive'
+                - 'power calls product (only)'
+                - {name: 'power works', weight: 3}
     PA06:
         title: 'bomb'
         link: pa06-bomb.html
@@ -415,7 +396,7 @@ assignments:
         link: pa07-smallc.html
         due: 2019-10-29 17:00:00
         rubric:
-            kind: breakdown
+            kind: hybrid
             parts:
                 -   name: 1st correct function
                     ratio: 20
