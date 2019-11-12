@@ -400,22 +400,15 @@ assignments:
         due: 2019-10-29 17:00:00
         rubric:
             kind: hybrid
-            parts:
-                -   name: 1st correct function
-                    ratio: 20
-                    rubric: {"kind":"check"}
-                -   name: 2nd correct function
-                    ratio: 20
-                    rubric: {"kind":"check"}
-                -   name: 3rd correct function
-                    ratio: 20
-                    rubric: {"kind":"check"}
-                -   name: 4th correct function
-                    ratio: 20
-                    rubric: {"kind":"check"}
-                -   name: 5th correct function
-                    ratio: 20
-                    rubric: {"kind":"check"}
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - 1st correct function
+                - 2nd correct function
+                - 3rd correct function
+                - 4th correct function
+                - 5th correct function
 
     PA08:
         title: linkedlist
@@ -431,34 +424,22 @@ assignments:
     PA10:
         title: schat
         files: schat.c
-        due: 2019-12-03 17:00:00
+        link: pa10-schat.html
+        due: 2019-12-06 17:00:00
         rubric:
-            kind: breakdown
-            parts:
-                -   name: Has server and client code from lab
-                    ratio: 12.5
-                    rubric: {"kind":"check"}
-                -   name: Server uses result of accept()
-                    ratio: 12.5
-                    rubric: {"kind":"check"}
-                -   name: Client uses result of socket()
-                    ratio: 12.5
-                    rubric: {"kind":"check"}
-                -   name: Makes two struct pollfds
-                    ratio: 12.5
-                    rubric: {"kind":"check"}
-                -   name: fd are 0 and used socket
-                    ratio: 12.5
-                    rubric: {"kind":"check"}
-                -   name: events include POLLIN
-                    ratio: 12.5
-                    rubric: {"kind":"check"}
-                -   name: repeatedly invokes poll()
-                    ratio: 12.5
-                    rubric: {"kind":"check"}
-                -   name: read()s one descriptor, write()s another
-                    ratio: 12.5
-                    rubric: {"kind":"check"}
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - Has server and client code from lab
+                - Server uses result of accept()
+                - Client uses result of socket()
+                - Makes two struct pollfds
+                - fd are 0 and used socket
+                - name: events include POLLIN
+                - repeatedly invokes poll()
+                - read()s one descriptor, write()s another
     Quiz00:
         due: 2019-09-02 13:00:00
         weight: 0
