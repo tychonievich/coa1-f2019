@@ -377,7 +377,7 @@ assignments:
             auto-weight: 0
             late-penalty: 1
             auto-late-days: 0
-            huamn:
+            human:
                 - 'submitted'
                 - 'assembles'
                 - 'runs'
