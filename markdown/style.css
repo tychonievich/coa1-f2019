@@ -89,7 +89,7 @@ pre ins, code ins {
     text-decoration: none;
     border-radius: 0.5ex;
     border: 0.125ex solid rgba(0,0,0,0.12);
-    padding: 0ex 0.25ex;
+    padding: 0.25ex;
     box-shadow: inset 0 0.0625ex 0.125ex rgba(0,0,0,0.25);
 }
 
