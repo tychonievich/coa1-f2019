@@ -88,7 +88,11 @@ pre ins, code ins {
     background: rgba(255,255,255,1);
     text-decoration: none;
     border-radius: 0.5ex;
+    border: 0.125ex solid rgba(0,0,0,0.12);
+    padding: 0ex 0.25ex;
+    box-shadow: inset 0 0.0625ex 0.125ex rgba(0,0,0,0.25);
 }
+
 
 /* Images */
 img.face { height:14.2em; display:float; float:right; margin:1em; margin-right:0em; }
