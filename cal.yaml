@@ -190,7 +190,7 @@ labs:
     - fchat
     - sockets
     - cpp
-    - cpp
+    - stl
 
 
 
@@ -226,6 +226,10 @@ reading:
     'sockets':
         txt: in-lab description
         lnk: lab09-sockets.html
+    cpp:
+        txt: in-lab description
+        lnk: lab10-cpp.html
+        
     
     Review:
         txt: topics list
