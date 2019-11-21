@@ -115,30 +115,29 @@ just as `stdout` is C's `FILE *` wrapper around the same.
 C++ also allows what it calls "`friend`" functions, which are used to add functions and operators to existing classes in new files.
 A common example is to add `ostream << mytype` operators for new types.
 
-# STL
+# STL and standard library
 
-The Standard Template Library (STL) is a collection of C++ types and functions that provide much of the programming ease that C++ offers over C. Although there are other components of it, the best known parts are a collections library.
+The C++ Standard Library has a variety of types and algorithms in it.
+Some of the best known of these are part of the "Standard Template Library (STL)", and sometimes people use "STL" informally to mean the full C++ Standard Lbirary.
+There is more in the library than we can fully cover, but the following will get you going:
 
-## Pointer-based
+|include|provides|STL?|description|
+|:-|:-|:-:|:-|
+|`<list>`|`std::list<T>`|STL|doubly-linked list; key functions `push_`/`pop_front`, `push_`/`pop_back`|
+|`<map>`|`std::map<K,V>`|STL|tree-map; key function `[key]`|
+|`<stack>`|`std::stack<T>`|STL|stack; key functions `push`, `pop`, `top`|
+|`<queue>`|`std::queue<T>`|STL|queue; key functions `push` `pop`, `front`|
+|`<vector>`|`std::vector<T>`|STL|resizable array; key functions `[index]`, `insert`, `push_`/`pop_back`|
+|`<iterator>`|`std::iterator<T>`|STL|use as `for(it = c.begin(); it != c.end(); ++it)`{.cpp} for STL iterator `it` and collection `c`|
+|`<string>`|`std::string`||Wraps a `const char *` with various useful methods (`find`, `replace`, `size`, `+=`, etc)|
+|`<iostream>`|`std::istream`,`std:ostream`||C++ file handling; operator `<<` writes and `>>` reads; defines `cin`, `cout,` and `cerr`|
 
-- `std::list<T>` a doubly-linked list
-- `std::map<K,V>` a tree map, with the $O(\log n)$ time and space that entails
-- `std::set<T>` a tree set, with the $O(\log n)$ time and space that entails
-- `std::multiset<T>` a tree multi-set (allows duplicates) with the $O(\log n)$ time and space that entails
-- `std::multimap<K,V>` a tree multi-map (allows duplicates) with the $O(\log n)$ time and space that entails
+There are many others not listed above; see [wikipedia](https://en.wikipedia.org/wiki/C%2B%2B_Standard_Library) for a reasonable overview.
 
-## Array-based
 
-- `std::vector<T>` a resizable array of `T`. Much like a Java `ArrayList`, it offers $O(1)$ access to any member, amortized $O(1)$ adding at back, and $O(n)$ inserting or removing in middle.
-- `std::deque<T>` a resizable array of small fixed-size arrays of `T` designed so that space is $O(n)$, access to front and back (for add and remove) is $O(1)$. The extra inner arrays add a little memory efficiency.
+# Your Task
 
-## Limited API
+Implement a postfix calculator, like you did in [PA09](pa09-postfix.html) but this time use C++. In particular,
 
-- `std::stack<T>` can be pushed and popped, FIFO-style, very efficiently, and nothing else.
-- `std::queue<T>` can be pushed and popped, LIFO-style, very efficiently, and nothing else.
-
-# Other common C++ library features
-
-The standard C++ library contains several non-templated types too:
-
-- `std:string` a smart string that overloads `+` to concatenate, stores length accessibly, etc
+- Use `stack<double>` as your stack
+- 
