@@ -115,5 +115,30 @@ just as `stdout` is C's `FILE *` wrapper around the same.
 C++ also allows what it calls "`friend`" functions, which are used to add functions and operators to existing classes in new files.
 A common example is to add `ostream << mytype` operators for new types.
 
-# The STL
+# STL
 
+The Standard Template Library (STL) is a collection of C++ types and functions that provide much of the programming ease that C++ offers over C. Although there are other components of it, the best known parts are a collections library.
+
+## Pointer-based
+
+- `std::list<T>` a doubly-linked list
+- `std::map<K,V>` a tree map, with the $O(\log n)$ time and space that entails
+- `std::set<T>` a tree set, with the $O(\log n)$ time and space that entails
+- `std::multiset<T>` a tree multi-set (allows duplicates) with the $O(\log n)$ time and space that entails
+- `std::multimap<K,V>` a tree multi-map (allows duplicates) with the $O(\log n)$ time and space that entails
+
+## Array-based
+
+- `std::vector<T>` a resizable array of `T`. Much like a Java `ArrayList`, it offers $O(1)$ access to any member, amortized $O(1)$ adding at back, and $O(n)$ inserting or removing in middle.
+- `std::deque<T>` a resizable array of small fixed-size arrays of `T` designed so that space is $O(n)$, access to front and back (for add and remove) is $O(1)$. The extra inner arrays add a little memory efficiency.
+
+## Limited API
+
+- `std::stack<T>` can be pushed and popped, FIFO-style, very efficiently, and nothing else.
+- `std::queue<T>` can be pushed and popped, LIFO-style, very efficiently, and nothing else.
+
+# Other common C++ library features
+
+The standard C++ library contains several non-templated types too:
+
+- `std:string` a smart string that overloads `+` to concatenate, stores length accessibly, etc
