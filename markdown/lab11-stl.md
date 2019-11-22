@@ -130,7 +130,8 @@ There is more in the library than we can fully cover, but the following will get
 |`<vector>`|`std::vector<T>`|STL|resizable array; key functions `[index]`, `insert`, `push_`/`pop_back`|
 |`<iterator>`|`std::iterator<T>`|STL|use as `for(it = c.begin(); it != c.end(); ++it)`{.cpp} for STL iterator `it` and collection `c`|
 |`<string>`|`std::string`||Wraps a `const char *` with various useful methods (`find`, `replace`, `size`, `+=`, `==`, etc)|
-|`<iostream>`|`std::istream`,`std:ostream`||C++ file handling; operator `<<` writes and `>>` reads; defines `cin`, `cout,` and `cerr`|
+|`<iostream>`|`std::istream` and `std:ostream`||C++ file handling; operator `<<` writes and `>>` reads; defines `cin`, `cout,` and `cerr`|
+|`<sstream>`|`std::stringstream`||Lets you treat a string like a file|
 
 There are many others not listed above; see [wikipedia](https://en.wikipedia.org/wiki/C%2B%2B_Standard_Library) for a reasonable overview.
 
@@ -142,17 +143,19 @@ Implement a postfix calculator, like you did in [PA09](pa09-postfix.html) but th
 
 - You must use `cin` to read input, `>>` to parse numbers, `string` and `==` to find operators, and `stack<double>`{.cpp} as your stack.
     
-    We strongly recommend, but do not requite, using a two-step read: read a word from `cin` into a `string`,
-    then feed the `string` into a `stringstream` and use the stringstream to parse a number. However, there are other solutions and you do not have to do this if you do not want to.
-    
 - You must implement `ostream & operator<<(ostream & o, stack<double> s)`{.cpp} to display a stack, and end your program with `cout << my_stack;`{.cpp}.
+    
+We strongly recommend, but do not requite, using a two-step read: read a word from `cin` into a `string`,
+then feed the `string` into a `stringstream` and use the stringstream to parse a number. However, there are other solutions and you do not have to do this if you do not want to.
+
+We strongly recommend, but do not require, adding `using namespace std;` after your `#include`s so that you can refer to included types by name without prefixing `std::` before each.
 {/}
 
 
 The input processing cal look like a loop which, as long as `cin` is `.good()` (i.e., not closed and with no read errors)
 
 1. `>>` a `string` from `cin`
-1. make a `stringstream` (from `#include <sstream>`) and feed it a `.str(...)` to parse
+1. make a `stringstream` and feed it a `.str(...)` to parse
 1. `>>` a `double` from the `stringstream`
 1.  if that `>>`ing `.fail()`s,
     
