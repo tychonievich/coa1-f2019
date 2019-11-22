@@ -37,8 +37,8 @@ def process(fname):
                 print('\n'+(c.group(1) if c.group(1) else '')+'\\safecloseclass{'+tags.pop()+'}</div>\n')
             else:
                 sys.stdout.write(line)
-            if o is not None and not o.group(2):
-                print('\\safecloseclass{'+o.group(1)+'}</div>\n')
+            if o is not None and not o.group(3):
+                print('\n'+o.group(1)+'\\safecloseclass{'+o.group(2)+'}</div>\n')
             newp = line.isspace()
 
 for arg in sys.argv[1:]:
