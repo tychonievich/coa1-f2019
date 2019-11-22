@@ -234,7 +234,7 @@ C++ also extends `struct` and `class` to allow them to declare member functions 
 
 Constructors are an important part of how OO objects are initialized.
 C++ has added an operator `new` that acts like "`malloc`^[C++ generally manages the heap slightly differently when using `malloc` vs `new`, so never `free` something allocated with `new` or vice verse.] and then invoke a constructor"
-and an operator `delete` that acts like "`free` and then invoke a destructor",
+and an operator `delete` that acts like "invoke a destructor and then `free`",
 
 Thus, we could test the code above with
 
