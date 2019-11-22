@@ -129,7 +129,7 @@ There is more in the library than we can fully cover, but the following will get
 |`<queue>`|`std::queue<T>`|STL|queue; key functions `push` `pop`, `front`|
 |`<vector>`|`std::vector<T>`|STL|resizable array; key functions `[index]`, `insert`, `push_`/`pop_back`|
 |`<iterator>`|`std::iterator<T>`|STL|use as `for(it = c.begin(); it != c.end(); ++it)`{.cpp} for STL iterator `it` and collection `c`|
-|`<string>`|`std::string`||Wraps a `const char *` with various useful methods (`find`, `replace`, `size`, `+=`, etc)|
+|`<string>`|`std::string`||Wraps a `const char *` with various useful methods (`find`, `replace`, `size`, `+=`, `==`, etc)|
 |`<iostream>`|`std::istream`,`std:ostream`||C++ file handling; operator `<<` writes and `>>` reads; defines `cin`, `cout,` and `cerr`|
 
 There are many others not listed above; see [wikipedia](https://en.wikipedia.org/wiki/C%2B%2B_Standard_Library) for a reasonable overview.
@@ -137,7 +137,37 @@ There are many others not listed above; see [wikipedia](https://en.wikipedia.org
 
 # Your Task
 
-Implement a postfix calculator, like you did in [PA09](pa09-postfix.html) but this time use C++. In particular,
+{.exercise ...}
+Implement a postfix calculator, like you did in [PA09](pa09-postfix.html) but this time use C++.
 
-- Use `stack<double>` as your stack
-- 
+- You must use `cin` to read input, `>>` to parse numbers, `string` and `==` to find operators, and `stack<double>`{.cpp} as your stack.
+    
+    We strongly recommend, but do not requite, using a two-step read: read a word from `cin` into a `string`,
+    then feed the `string` into a `stringstream` and use the stringstream to parse a number. However, there are other solutions and you do not have to do this if you do not want to.
+    
+- You must implement `ostream & operator<<(ostream & o, stack<double> s)`{.cpp} to display a stack, and end your program with `cout << my_stack;`{.cpp}.
+{/}
+
+
+The input processing cal look like a loop which, as long as `cin` is `.good()` (i.e., not closed and with no read errors)
+
+1. `>>` a `string` from `cin`
+1. make a `stringstream` (from `#include <sstream>`) and feed it a `.str(...)` to parse
+1. `>>` a `double` from the `stringstream`
+1.  if that `>>`ing `.fail()`s,
+    
+    a.  check if the `string` is `==` to an operator, and 
+    
+        i.  if so apply the operator (ending if there are fewer than 2 operands)
+            
+            otherwise, end the loop
+        
+        otherwise, push the `double`
+
+Use a `stack<double>` as your stack. Note that `pop` returns `void`; you'll need to use `top` to retrieve a value before `pop`ing it off the stack.
+
+Displaying a `stack` is not something the STL natively supports.
+You'll need to implement your own `ostream & operator<<(ostream & o, stack<double> s)`{.cpp}
+which repeatedly displays (with `<<`) the `top()` and then `pop()`s until the stack is `.empty()`.
+Note that we pass in the ouput stream by reference (with `&`), but pass the stack by value.
+Passing by value means passing a copy, so `pop`ing `s` does not `pop` the stack that was passed in, only the local copy of it that the `operator<<` function contains.
