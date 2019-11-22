@@ -7,7 +7,7 @@ title: Review
 
 The following are the practice and real exams prepared for last year. While we have explained a few ideas slightly differently than this semester, these should be considered good baselines for what to expect in exams this year.
 
-Semester     Exam   Practice                            Actual                          Key                                 Mean    Median  Deviation
+Semester     Exam    Practice                            Actual                          Key                                Mean    Median  Deviation
 ----------- ------- ----------------------------------  -----------------------------   --------------------------------    -----   ------- ---------
 Fall 2018     1     [pdf](files/f2018e1practice.pdf)    [pdf](files/f2018e1real.pdf)    [html](files/f2018e1key.html)
 Fall 2018     2     [pdf](files/f2018e2practice.pdf)    [pdf](files/f2018e2real.pdf)    [html](files/f2018e2key.html)
