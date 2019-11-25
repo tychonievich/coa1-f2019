@@ -23,6 +23,19 @@ The following are additional references:
 - [Debugger example](cmdadd.html), using `lldb` and `ghex`
 - [Tips for Linux on your own computer](linux.html), including how to connect to UVA's instantiation of eduroam and handling digital certificates.
 
+The following are assignment writeups:
+
+- [Bit fiddling](pa01-bit fiddling.html)
+- [Gates](pa02-worksheet.html)
+- [Binary coding 1: Mult](pa03-mult.html)
+- [Binary coding 2: Fib](pa04-fib.html)
+- [x86-64 Assembly](pa05-assembly.html)
+- [Assembly Debugging](pa06-bomb.html)
+- [Small C Functions](pa07-smallc.html)
+- [Linked List in C](pa08-linkedlist.html)
+- [Postfix Calculator](pa09-postfix.html)
+- [Socket-based chat](pa10-schat.html)
+
 # Overview 
 
 This is part of a pilot of a new set of CS courses.
