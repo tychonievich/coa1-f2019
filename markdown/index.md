@@ -36,6 +36,22 @@ The following are assignment writeups:
 - [Postfix Calculator](pa09-postfix.html)
 - [Socket-based chat](pa10-schat.html)
 
+The following are lab writeups:
+
+- [SSH and Editors](lab00-ssh-ed.html)
+- [Git & Information Theory](lab01-git-infotheory.html)
+- [Hex Editor](lab02-hex-editor.html)
+- [ISA Simulator](lab03-simulator.html)
+- [Tools help](lab04-tools.html)
+- [Debugger](lab05-debugger.html)
+- [Assembly Debugging](lab06-bomb.html)
+- [`char *` coding](lab07-char*.html)
+- [File-based chat system](lab08-fchat.html)
+- [Sockets](lab09-sockets.html)
+- [From C to C++](lab10-cpp.html)
+- The C++ STL (pending revisions)
+
+
 # Overview 
 
 This is part of a pilot of a new set of CS courses.
