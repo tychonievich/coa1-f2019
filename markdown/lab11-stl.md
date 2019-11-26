@@ -71,10 +71,7 @@ int x2 = foo<int>(3); // told it is a template and type
 
 {.aside} Another difference from Java is that the parameters of a template do not need to be type names; they could also be values, like integers. Value templates are unusual enough in C++ we'll say no more about them here.
 
-{.aside ...} C++ template metaprogramming is a complicated topic on which entire books have been written. Some libraries, such as [boost](https://www.boost.org/) and [FFTW](http://fftw.org/) are well-known for complicated template usage.
-
-If you find yourself intrigued by templates, I recommend [D](https://dlang.org) as having a richer, more programmer-friendly template mechanism than C++.
-{/}
+{.aside} C++ template metaprogramming is a complicated topic on which entire books have been written. Some libraries, such as [boost](https://www.boost.org/) and [FFTW](http://fftw.org/) are well-known for complicated template usage. If you find yourself intrigued by templates, I recommend the [D language](https://dlang.org) as having a richer, more programmer-friendly template mechanism than C++.
 
 ## Operator Overloading and Friends
 
@@ -108,9 +105,20 @@ int main() {
 }
 ```
 
+Because `<<` is also overloaded to work with multiple types, we can write
+
+```cpp
+#include <iostream>
+int main() {
+    std::cout << "Hello, all " << (3 + 1) << " dimensions!" << std::endl;
+}
+```
+
 `cout`, by the way, is C++'s `ostream` wrapper around file descriptor `1`,
 just as `stdout` is C's `FILE *` wrapper around the same.
 {/}
+
+Not all `ostream`s will flush output as promptly as others. For debugging, you should definitely use `cerr` instead of `cout` as it is better about showing everything when you ask it to be shown instead of delaying until later.
 
 C++ also allows what it calls "`friend`" functions, which are used to add functions and operators to existing classes in new files.
 A common example is to add `ostream << mytype` operators for new types.
@@ -135,6 +143,8 @@ There is more in the library than we can fully cover, but the following will get
 
 There are many others not listed above; see [wikipedia](https://en.wikipedia.org/wiki/C%2B%2B_Standard_Library) for a reasonable overview.
 
+Note that many C++ types overload `==` to compare values the way that `.equals()` does in Java.
+Hence `"Hi" == "Hi"`{.c} compares pointers, but `string("Hi") == string("Hi")`{.cpp} compares words.
 
 # Your Task
 
@@ -143,7 +153,9 @@ Implement a postfix calculator, like you did in [PA09](pa09-postfix.html) but th
 
 - You must use `cin` to read input, `>>` to parse numbers, `string` and `==` to find operators, and `stack<double>`{.cpp} as your stack.
     
-- You must implement `ostream & operator<<(ostream & o, stack<double> s)`{.cpp} to display a stack, and end your program with `cout << my_stack;`{.cpp}.
+- You must print your stack by repeated display-and-pop, as `stack` does not have printing capability. 
+
+    - If you have time, implement `ostream & operator<<(ostream & o, stack<double> s)`{.cpp} to display a stack, and end your program with `cout << my_stack;`{.cpp} instead.
     
 We strongly recommend, but do not requite, using a two-step read: read a word from `cin` into a `string`,
 then feed the `string` into a `stringstream` and use the stringstream to parse a number. However, there are other solutions and you do not have to do this if you do not want to.
@@ -155,9 +167,9 @@ We strongly recommend, but do not require, adding `using namespace std;` after y
 The input processing cal look like a loop which, as long as `cin` is `.good()` (i.e., not closed and with no read errors)
 
 1. `>>` a `string` from `cin`
-1. make a `stringstream` and feed it a `.str(...)` to parse
+1. make a `stringstream` and `<<` a `string` into it
 1. `>>` a `double` from the `stringstream`
-1.  if that `>>`ing `.fail()`s,
+1.  if that `>>`ing into the `stringstream` causes the `stringstream` to `.fail()`,
     
     a.  check if the `string` is `==` to an operator, and 
     
@@ -169,8 +181,9 @@ The input processing cal look like a loop which, as long as `cin` is `.good()` (
 
 Use a `stack<double>` as your stack. Note that `pop` returns `void`; you'll need to use `top` to retrieve a value before `pop`ing it off the stack.
 
-Displaying a `stack` is not something the STL natively supports.
-You'll need to implement your own `ostream & operator<<(ostream & o, stack<double> s)`{.cpp}
+Displaying a `stack` is not something the STL natively supports, so you'll need to do that manually.
+
+If you have time, implement your own `ostream & operator<<(ostream & o, stack<double> s)`{.cpp}
 which repeatedly displays (with `<<`) the `top()` and then `pop()`s until the stack is `.empty()`.
 Note that we pass in the ouput stream by reference (with `&`), but pass the stack by value.
 Passing by value means passing a copy, so `pop`ing `s` does not `pop` the stack that was passed in, only the local copy of it that the `operator<<` function contains.

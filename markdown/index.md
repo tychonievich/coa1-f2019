@@ -49,7 +49,7 @@ The following are lab writeups:
 - [File-based chat system](lab08-fchat.html)
 - [Sockets](lab09-sockets.html)
 - [From C to C++](lab10-cpp.html)
-- The C++ STL (pending revisions)
+- [The C++ STL](lab11-stl.html)
 
 
 # Overview 
