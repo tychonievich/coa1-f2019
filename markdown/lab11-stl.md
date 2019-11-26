@@ -12,7 +12,7 @@ It assumes you learned all of the topics in [last week's lab](lab10-cpp.html).
 In C, if you have an argument of type `int *`{.c} you don't know if it is an array or just a value you are supposed to set.
 C++ adds syntax to allow these to look different the "reference" argument type.
 
-If you write a function where an argument name is followed by an ampersand (e.g., `int x&`{.cpp})
+If you write a function where an argument name is followed by an ampersand (e.g., `int &x`{.cpp})
 then C++ will compile it to be a pointer, but have your syntax look like it is a variable.
 
 {.example ...} The following two pieces of code are equivalent in how they run
@@ -21,7 +21,7 @@ then C++ will compile it to be a pointer, but have your syntax look like it is a
 | C code                                | C++ code                              |
 +=======================================+=======================================+
 | ````c                                 | ````cpp                               |
-| int f(int *x) {                       | int f(int x&) {                       |
+| int f(int *x) {                       | int f(int &x) {                       |
 |     int ans = *x + 2;                 |     int ans = x + 2                   |
 |     *x = 3;                           |     x = 3;                            |
 |     return ans;                       |     return ans;                       |
