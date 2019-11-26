@@ -673,6 +673,40 @@ assignments:
         open: 2019-11-06 17:00:00
         due: 2019-11-07 18:15:00
         link: review.html
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - (E2-1) Q1 correct
+                - (E2-1) Q2 correct
+                - (E2-2) Q3 correct
+                - (E2-2) Q4 correct
+                - (E2-2) Q5 correct
+                - (E2-2) Q6 correct
+                - (E2-3) Q7 correct
+                - (E2-3) Q8 correct
+                - (E2-3) Q9 correct
+                - (E2-3) Q10 correct
+                - (E2-4) Q11 correct
+                - (E2-4) Q12 correct
+                - (E2-4) Q13 blank 1 correct
+                - (E2-4) Q13 blank 2 correct
+                - (E2-4) Q13 blank 3 correct
+                - (E2-4) Q13 blank 4 correct
+                - (E2-4) Q13 blank 5 correct
+                - (E2-4) Q13 blank 6 correct
+                - (E2-5) Q14 follows limitations given
+                - (E2-5) Q14 loop with gotos
+                - (E2-5) Q14 else without "else"
+                - (E2-5) Q14 nothing else wrong
+                - (E2-6) Q15 commented right frees
+                - (E2-6) Q15 left other frees uncommented
+                - (E2-6) Q16 correct
+                - (E2-6) Q17 correct
+                - (E2-6) Q18 correct
+                - (E2-6) pledged
 
     E2-1:
         open: 2019-11-06 17:00:00
