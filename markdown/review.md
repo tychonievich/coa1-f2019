@@ -13,7 +13,7 @@ Fall 2018     1     [pdf](files/f2018e1practice.pdf)    [pdf](files/f2018e1real.
 Fall 2018     2     [pdf](files/f2018e2practice.pdf)    [pdf](files/f2018e2real.pdf)    [html](files/f2018e2key.html)
 Fall 2018     3     [pdf](files/f2018e3practice.pdf)    [pdf](files/f2018e3real.pdf)    [html](files/f2018e3key.html)
 Fall 2019     1                                         [pdf](files/f2019e1.pdf)        [html](files/f2019e1key.html)       83.2%   86.8%   12.4%
-Fall 2019     2                                         [pdf](files/f2019e2.pdf)                                            75.5%   78.7%   12.4%
+Fall 2019     2                                         [pdf](files/f2019e2.pdf)        [html](files/f2019e2key.html)       75.5%   78.7%   12.4%
 
 <!--
 
