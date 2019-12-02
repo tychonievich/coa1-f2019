@@ -173,7 +173,7 @@ lectures:
     -   defensive programming
 
     -   languages safer than C
-    -   languages safer than C
+    -   ask me anything
     
     -   review
 
@@ -324,6 +324,9 @@ reading:
         lnk: https://doc.rust-lang.org/1.8.0/book/references-and-borrowing.html
       - txt: lifetimes
         lnk: https://doc.rust-lang.org/1.8.0/book/lifetimes.html
+    ask me anything:
+      - txt: submit questions here
+        lnk: 'https://docs.google.com/forms/d/e/1FAIpQLSe124j9aFF7uUaW94F8NC5J8QofMsJlfvWnn23uKctZIKP9wg/viewform?usp=sf_link'
 
 assignments:
     ".groups":
