@@ -172,7 +172,7 @@ lectures:
     -   function pointers
     -   defensive programming
 
-    -   defensive programming
+    -   languages safer than C
     -   languages safer than C
     
     -   review
@@ -313,6 +313,13 @@ reading:
     defensive programming: 
         txt: wikipedia
         lnk: https://en.wikipedia.org/wiki/Defensive_programming
+    languages safer than C:
+      - txt: rust
+        lnk: https://en.wikipedia.org/wiki/Rust_(programming_language)
+      - txt: rust-lang
+        lnk: https://www.rust-lang.org/
+      - txt: borrow checker
+        lnk: https://doc.rust-lang.org/1.8.0/book/references-and-borrowing.html
 
 assignments:
     ".groups":
