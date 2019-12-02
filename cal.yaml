@@ -318,8 +318,12 @@ reading:
         lnk: https://en.wikipedia.org/wiki/Rust_(programming_language)
       - txt: rust-lang
         lnk: https://www.rust-lang.org/
-      - txt: borrow checker
+      - txt: ownership
+        lnk: https://doc.rust-lang.org/1.8.0/book/ownership.html
+      - txt: borrowing
         lnk: https://doc.rust-lang.org/1.8.0/book/references-and-borrowing.html
+      - txt: lifetimes
+        lnk: https://doc.rust-lang.org/1.8.0/book/lifetimes.html
 
 assignments:
     ".groups":
