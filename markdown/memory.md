@@ -322,8 +322,8 @@ Consider the following code:
 
 ```c
 int bad(int a) {
-    int *list = malloc(a, sizeof(int));
-    for(int i=0; i<a; i+=1) list[i] = (i+1*(i+1);
+    int *list = calloc(a, sizeof(int));
+    for(int i=0; i<a; i+=1) list[i] = (i+1)*(i+1);
     int sum = 0;
     for(int i=0; i<a; i+=1) sum += list[i];
     // midpoint
