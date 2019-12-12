@@ -453,14 +453,16 @@ assignments:
             late-penalty: 1
             auto-late-days: 0
             human:
-                - Has server and client code from lab
-                - Server uses result of accept()
-                - Client uses result of socket()
-                - Makes two struct pollfds
-                - fd are 0 and used socket
-                - name: events include POLLIN
-                - repeatedly invokes poll()
-                - read()s one descriptor, write()s another
+                - Added to lab code
+                - Compiles
+                - Server runs
+                - Client runs
+                - Some kind of chat works
+                - name: Chat works properly
+                  weight: 2
+                - name: code uses socket, stdin, and poll
+                  weight: 2
+                - ends when end-of-file reached
     Quiz00:
         due: 2019-09-02 13:00:00
         weight: 0
