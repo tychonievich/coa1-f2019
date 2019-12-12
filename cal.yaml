@@ -462,7 +462,7 @@ assignments:
                   weight: 2
                 - name: code uses socket, stdin, and poll
                   weight: 2
-                - ends when end-of-file reached
+                - ends when end-of-file or Ctrl+C reached
     Quiz00:
         due: 2019-09-02 13:00:00
         weight: 0
