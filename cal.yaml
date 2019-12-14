@@ -910,15 +910,13 @@ assignments:
             late-penalty: 1
             auto-late-days: 0
             human:
-                - name: 'Q6 is A (half for B)'
+                - name: 'Q1 is 0x501002'
                   weight: 2
-                - name: 'Q7 is same'
+                - name: 'Q2 is ABD (half if off-by-one; 0 if off-by-two)'
                   weight: 2
-                - name: 'Q8 is same'
+                - name: 'Q3 is -x-1, -(x+1), x^-1, x^0xFF...'
                   weight: 2
-                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
-                  weight: 2
-                - name: 'Q10 B (half for C)'
+                - name: 'Q4 is 0xC1'
                   weight: 2
     E3-2:
         hide: true
@@ -931,15 +929,15 @@ assignments:
             late-penalty: 1
             auto-late-days: 0
             human:
-                - name: 'Q6 is A (half for B)'
+                - name: 'Q5 is 3-input 1-output digital circuit'
+                  weight: 1
+                - name: 'Q5 is equiv to (x&s)|(y&!s)'
+                  weight: 1
+                - name: 'Q6 is 0x56 (half for 65 or 34)'
                   weight: 2
-                - name: 'Q7 is same'
+                - name: 'Q7 is 60 9A 30 or equivalent (no penalty for using extra registers, as e.g. 64/8/C 9A 31/2/3)'
                   weight: 2
-                - name: 'Q8 is same'
-                  weight: 2
-                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
-                  weight: 2
-                - name: 'Q10 B (half for C)'
+                - name: 'Q8 is {0,1,2,3} (half for {0,1})'
                   weight: 2
     E3-3:
         hide: true
@@ -952,15 +950,15 @@ assignments:
             late-penalty: 1
             auto-late-days: 0
             human:
-                - name: 'Q6 is A (half for B)'
+                - name: 'Q9 is 2'
                   weight: 2
-                - name: 'Q7 is same'
+                - name: 'Q10 has value in second spot'
+                  weight: 1
+                - name: 'Q10 is foo(_, 0) for some _'
+                  weight: 1
+                - name: 'Q11 is 8'
                   weight: 2
-                - name: 'Q8 is same'
-                  weight: 2
-                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
-                  weight: 2
-                - name: 'Q10 B (half for C)'
+                - name: 'Q12 is B (half for C)'
                   weight: 2
     E3-4:
         hide: true
@@ -973,16 +971,12 @@ assignments:
             late-penalty: 1
             auto-late-days: 0
             human:
-                - name: 'Q6 is A (half for B)'
-                  weight: 2
-                - name: 'Q7 is same'
-                  weight: 2
-                - name: 'Q8 is same'
-                  weight: 2
-                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
-                  weight: 2
-                - name: 'Q10 B (half for C)'
-                  weight: 2
+                - name: 'Q13 frees lst3 at end'
+                  weight: 1
+                - name: 'Q13 does not free anythign else'
+                  weight: 1
+                - name: 'Q14 mentions global or passed in storage'
+                  weight: 1
     E3-5:
         hide: true
         open: 2019-12-14 09:00:00
@@ -994,16 +988,22 @@ assignments:
             late-penalty: 1
             auto-late-days: 0
             human:
-                - name: 'Q6 is A (half for B)'
-                  weight: 2
-                - name: 'Q7 is same'
-                  weight: 2
-                - name: 'Q8 is same'
-                  weight: 2
-                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
-                  weight: 2
-                - name: 'Q10 B (half for C)'
-                  weight: 2
+                - name: 'ssize_t write_long(int fd, long num)'
+                  weight: 1
+                - name: 'no extra libraries used'
+                  weight: 1
+                - name: 'handles negatives'
+                  weight: 1
+                - name: 'loops over all digits'
+                  weight: 1
+                - name: 'uses % to extract digits'
+                  weight: 1
+                - name: "puts '0'+digit in char buffer'
+                  weight: 1
+                - name: "tracks used length of buffer'
+                  weight: 1
+                - name: 'write(fd, buffer, length)'
+                  weight: 1
     E3-7:
         hide: true
         open: 2019-12-14 09:00:00
@@ -1015,16 +1015,14 @@ assignments:
             late-penalty: 1
             auto-late-days: 0
             human:
-                - name: 'Q6 is A (half for B)'
-                  weight: 2
-                - name: 'Q7 is same'
-                  weight: 2
-                - name: 'Q8 is same'
-                  weight: 2
-                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
-                  weight: 2
-                - name: 'Q10 B (half for C)'
-                  weight: 2
+                - name: 'Q16 mentions finding substring or the like'
+                  weight: 1
+                - name: 'Q16 returns pointer to first occurrence of a in b, or NULL if not occurrence'
+                  weight: 1
+                - name: 'Q17 has explanatory text or comment'
+                  weight: 1
+                - name: 'Q17 shows code using sptr'
+                  weight: 1
     E3-8:
         hide: true
         open: 2019-12-14 09:00:00
@@ -1036,13 +1034,17 @@ assignments:
             late-penalty: 1
             auto-late-days: 0
             human:
-                - name: 'Q6 is A (half for B)'
-                  weight: 2
-                - name: 'Q7 is same'
-                  weight: 2
-                - name: 'Q8 is same'
-                  weight: 2
-                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
-                  weight: 2
-                - name: 'Q10 B (half for C)'
-                  weight: 2
+                - name: 'Q18 problem either "i is wrong" or "j=n out of range"'
+                  weight: 1
+                - name: 'Q18 solution solves both problems'
+                  weight: 1
+                - name: 'Q19 row 1 is ● ○'
+                  weight: 1
+                - name: 'Q19 row 2 is ○ ●'
+                  weight: 1
+                - name: 'Q19 row 3 is ○ ●'
+                  weight: 1
+                - name: 'Q19 row 4 is ○ ○'
+                  weight: 1
+                - name: 'Q19 row 5 is ● ●'
+                  weight: 1
