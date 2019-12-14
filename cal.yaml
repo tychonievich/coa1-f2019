@@ -898,3 +898,151 @@ assignments:
     Lab11:
         due: 2019-12-05 19:00:00
         open: 2019-12-04 17:00:00
+
+    E3-1:
+        hide: true
+        open: 2019-12-14 09:00:00
+        due: 2019-12-14 12:00:00
+        weight: 10
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - name: 'Q6 is A (half for B)'
+                  weight: 2
+                - name: 'Q7 is same'
+                  weight: 2
+                - name: 'Q8 is same'
+                  weight: 2
+                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
+                  weight: 2
+                - name: 'Q10 B (half for C)'
+                  weight: 2
+    E3-2:
+        hide: true
+        open: 2019-12-14 09:00:00
+        due: 2019-12-14 12:00:00
+        weight: 10
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - name: 'Q6 is A (half for B)'
+                  weight: 2
+                - name: 'Q7 is same'
+                  weight: 2
+                - name: 'Q8 is same'
+                  weight: 2
+                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
+                  weight: 2
+                - name: 'Q10 B (half for C)'
+                  weight: 2
+    E3-3:
+        hide: true
+        open: 2019-12-14 09:00:00
+        due: 2019-12-14 12:00:00
+        weight: 10
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - name: 'Q6 is A (half for B)'
+                  weight: 2
+                - name: 'Q7 is same'
+                  weight: 2
+                - name: 'Q8 is same'
+                  weight: 2
+                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
+                  weight: 2
+                - name: 'Q10 B (half for C)'
+                  weight: 2
+    E3-4:
+        hide: true
+        open: 2019-12-14 09:00:00
+        due: 2019-12-14 12:00:00
+        weight: 10
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - name: 'Q6 is A (half for B)'
+                  weight: 2
+                - name: 'Q7 is same'
+                  weight: 2
+                - name: 'Q8 is same'
+                  weight: 2
+                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
+                  weight: 2
+                - name: 'Q10 B (half for C)'
+                  weight: 2
+    E3-5:
+        hide: true
+        open: 2019-12-14 09:00:00
+        due: 2019-12-14 12:00:00
+        weight: 10
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - name: 'Q6 is A (half for B)'
+                  weight: 2
+                - name: 'Q7 is same'
+                  weight: 2
+                - name: 'Q8 is same'
+                  weight: 2
+                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
+                  weight: 2
+                - name: 'Q10 B (half for C)'
+                  weight: 2
+    E3-7:
+        hide: true
+        open: 2019-12-14 09:00:00
+        due: 2019-12-14 12:00:00
+        weight: 10
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - name: 'Q6 is A (half for B)'
+                  weight: 2
+                - name: 'Q7 is same'
+                  weight: 2
+                - name: 'Q8 is same'
+                  weight: 2
+                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
+                  weight: 2
+                - name: 'Q10 B (half for C)'
+                  weight: 2
+    E3-8:
+        hide: true
+        open: 2019-12-14 09:00:00
+        due: 2019-12-14 12:00:00
+        weight: 10
+        rubric:
+            kind: hybrid
+            auto-weight: 0
+            late-penalty: 1
+            auto-late-days: 0
+            human:
+                - name: 'Q6 is A (half for B)'
+                  weight: 2
+                - name: 'Q7 is same'
+                  weight: 2
+                - name: 'Q8 is same'
+                  weight: 2
+                - name: 'Q9 is "0x_0000000 where _ is neither 0 nor F'
+                  weight: 2
+                - name: 'Q10 B (half for C)'
+                  weight: 2
