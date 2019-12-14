@@ -1000,7 +1000,7 @@ assignments:
                   weight: 1
                 - name: "puts '0'+digit in char buffer"
                   weight: 1
-                - name: "tracks used length of buffer'
+                - name: "tracks used length of buffer"
                   weight: 1
                 - name: 'write(fd, buffer, length)'
                   weight: 1
