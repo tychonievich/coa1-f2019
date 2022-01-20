@@ -253,8 +253,11 @@ def cal2html(cal):
     return re.sub(r'(<a[^>]*href="[^"]*//[^"]*"[^<]*)</a>', r'\1'+external+'</a>', ''.join(ans))
 
 
+
 def cal2html2(cal):
     """Uses divs only, with no week-level divs"""
+    global vidlist
+    vidlist = {}    
     ans = ['<div id="schedule" class="calendar">']
     ldat = None
     for week in cal:
@@ -294,6 +297,8 @@ def cal2html2(cal):
                         ans.append('</details>')
                     else:
                         ans.append('<div class="{}">{}</div>'.format(' '.join(classes), title))
+                    if 'video' in e:
+                        vidlist[day['date']] = (title, e['video'])
                 ans.append('</div>')
                 ans.append('</div>')
             elif day is None and ldat is not None:
@@ -488,3 +493,36 @@ if __name__ == '__main__':
 
     with open('coursegrade.json', 'w') as f:
         f.write(pjson.prettyjson(coursegrade_json(raw), maxinline=16))
+    
+    with open('markdown/player.md', 'w') as f:
+        f.write('''---
+title: Video Player
+...
+
+<div id="playhere">Missing video name</div>
+
+Playback speed: <input type="text" id="speed" value="1.0" oninput="respeed()"/>
+
+<script type="text/javascript">
+function loadVid(path) {
+    var vid = location.hash.replace('#','lectures/')
+    var vtt = vid.replace(/[.][^.]*$/,'.vtt')
+    if (vid) {
+        document.getElementById('playhere').innerHTML = `
+<video controls repload="metadata" style="max-width:100%">
+<source src="${vid}" type="video/webm">
+</video>
+`;
+    }
+}
+function respeed() {
+    let vid = document.querySelector('video')
+    if (vid) vid.playbackRate = document.querySelector('#speed').value
+}
+</script>
+
+''')
+        for d,(t,v) in vidlist.items():
+            f.write('- {}: {} <a onclick="loadvid(\'{}\')">play recording</a> or [download webm]({})\n'.format(
+                d.strftime('%a %e %b'), t, v, v,
+            ))
