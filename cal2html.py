@@ -504,16 +504,12 @@ title: Video Player
 Playback speed: <input type="text" id="speed" value="1.0" oninput="respeed()"/>
 
 <script type="text/javascript">
-function loadVid(path) {
-    var vid = location.hash.replace('#','lectures/')
-    var vtt = vid.replace(/[.][^.]*$/,'.vtt')
-    if (vid) {
-        document.getElementById('playhere').innerHTML = `
-<video controls repload="metadata" style="max-width:100%">
+function loadVid(vid) {
+    document.getElementById('playhere').innerHTML = `
+<video controls preload="metadata" style="max-width:100%">
 <source src="${vid}" type="video/webm">
 </video>
 `;
-    }
 }
 function respeed() {
     let vid = document.querySelector('video')
