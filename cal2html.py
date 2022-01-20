@@ -523,6 +523,6 @@ function respeed() {
 
 ''')
         for d,(t,v) in vidlist.items():
-            f.write('- {}: {} <a onclick="loadvid(\'{}\')">play recording</a> or [download webm]({})\n'.format(
+            f.write('- {}: {} <a onclick="loadVid(\'{}\')">play recording</a> or [download webm]({})\n'.format(
                 d.strftime('%a %e %b'), t, v, v,
             ))
